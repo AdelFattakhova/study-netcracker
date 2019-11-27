@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Яндекс</title>
+</head>
+<body class="layout">
+<div class="layout__row">
+    <div class="header">
+        <div class="general">
+            <a class="general__item">
+                <img class="general__img">
+                <span class="general__text">Москва</span>
+            </a>
+            <a class="general__item">Конфиденциальность</a>
+        </div>
+        <div class="personal">
+            <a class="personal__item">
+                <img class="personal__icon _favorites">
+            </a>
+            <a class="personal__item">
+                <svg class="personal__icon"
+                     width="20px"
+                     height="20px">
+                    <use href="#bell"></use>
+                </svg>
+            </a>
+            <a class="personal__item">Настройка</a>
+        </div>
+    </div>
+</div>
+<div class="layout__col main">
+    <div class="layout__row">
+        <div class="layout__col news">
+            <div class="news__tabs">
+                <a class="news__tab news__head-item"></a>
+                <a class="news__tab news__head-item"></a>
+                <a class="news__tab news__head-item"></a>
+                <div class="news__head-item">
+                    <span class="news__date"></span>
+                    <a class="news__time"></a>
+                </div>
+            </div>
+            <ul class="news__news-list">
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item _important">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="rates">
+                <div class="rates__item">
+                    <a class="rates__name">USD MOEX</a>
+                    <span class="rates__value"></span>
+                    <span class="rates__change"></span>
+                </div>
+                <div class="rates__item">
+                    <a class="rates__name">EUR MOEX</a>
+                    <span class="rates__value"></span>
+                    <span class="rates__change"></span>
+                </div>
+                <div class="rates__item">
+                    <a class="rates__name">НЕФТЬ</a>
+                    <span class="rates__value"></span>
+                    <span class="rates__change"></span>
+                </div>
+            </div>
+        </div>
+        <div class="teaser">
+            <a class="teaser__link">
+                <img class="teaser__img">
+            </a>
+            <a class="teaser__link">
+                <span class="teaser__title"></span>
+            </a>
+            <div class="teaser__description">
+                <span class="teaser__comment"></span>
+                <span class="teaser__age"></span>
+            </div>
+        </div>
+    </div>
+    <div class="layout__row search">
+        <div class="home-logo">
+            <a class="home-logo__link" href="https://yandex.ru/">
+                <img class="home-logo__img">
+            </a>
+        </div>
+        <div class="layout__col search-bar">
+            <div class="search-bar__tabs">
+                <a class="search-bar__tab">Видео</a>
+                <a class="search-bar__tab">Картинки</a>
+                <a class="search-bar__tab">Новости</a>
+                <a class="search-bar__tab">Карты</a>
+                <a class="search-bar__tab">Маркет</a>
+                <a class="search-bar__tab">Переводчик</a>
+                <a class="search-bar__tab">Музыка</a>
+                <a class="search-bar__tab">Эфир</a>
+                <a class="search-bar__tab">ещё</a>
+            </div>
+            <div class="search-bar__wrapper">
+                <input class="search-bar__input" type="hidden">
+                <button class="search-bar__button">Найти</button>
+            </div>
+            <div class="search-bar__bottom">
+                <span class="search__sample">Найдётся всё. Например,&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <a href="" class="banner__link"></a>
+    </div>
+</div>
+<div class="sidebar">
+    <div class="card">
+        <div class="card__title">
+            <a class="card__user-name"></a>
+            <img class="card__user-img">
+        </div>
+        <div class="card__details">
+            <div class="card__mail">
+                <a class="card__mail-line">
+                    <div class="card__mail-title">Почта</div>
+                    <div class="card__mail-unread">новых нет</div>
+                </a>
+            </div>
+            <div class="card__items">
+                <a class="card__item">Написать письмо</a>
+                <a class="card__item">Деньги</a>
+                <a class="card__item">Диск</a>
+                <a class="card__item">Получить Плюс</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<div style="opacity: 0; visibility: hidden">
+    <!-- inject:svg -->
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="bell" viewBox="0 0 16 18">
+            <path d="M403.549,336.438l-49.015-72.002c0-22.041,0-75.898,0-89.83c0-60.581-43.144-111.079-100.381-122.459V24.485
+				C254.152,10.963,243.19,0,229.667,0s-24.485,10.963-24.485,24.485v27.663c-57.237,11.381-100.381,61.879-100.381,122.459
+				c0,23.716,0,76.084,0,89.83l-49.015,72.002c-5.163,7.584-5.709,17.401-1.419,25.511c4.29,8.11,12.712,13.182,21.887,13.182
+				H383.08c9.175,0,17.597-5.073,21.887-13.182C409.258,353.839,408.711,344.022,403.549,336.438z"/>
+        </symbol>
+    </svg>
+    <!-- endinject -->
+</div>
+
+</html>
