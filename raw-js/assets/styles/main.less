@@ -15,6 +15,10 @@
   flex-direction: column;
 }
 
+.main {
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -40,6 +44,25 @@ ul {
   list-style: none;
 }
 
-.search-bar__tab {
-  float: left;
+.search-bar {
+  .search-bar__tab {
+    float: left;
+    margin-right: 20px;
+  }
+  .search-bar__input {
+     height: 36px;
+     width: 100%;
+     border: 2px solid gold;
+     outline: 0;
+   }
+  .search-bar__button {
+    width: 88px;
+    font-size: 16px;
+    line-height: 34px;
+    border: none;
+    background-color: gold;
+  }
 }
+
+
+
