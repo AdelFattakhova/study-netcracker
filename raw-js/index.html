@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>RawJS</title>
+</head>
+<body>
+
+<!--<svg class="app__header-icon"
+     width="20px"
+     height="20px"
+     viewBox="0 0 20 20">
+    <use href="#bell"></use>
+</svg>-->
+
+<div class="layout__row">
+    <div class="header">
+        <div class="general">
+            <a class="general__item">
+                <img class="general__img">
+                <span class="general__text">Москва</span>
+            </a>
+            <a class="general__item">Конфиденциальность</a>
+        </div>
+        <div class="personal">
+            <a class="personal__item">
+                <img class="personal__icon _favorites">
+            </a>
+            <a class="personal__item">
+                <svg class="personal__icon"
+                     width="20px"
+                     height="20px">
+                    <use href="#bell"></use>
+                </svg>
+            </a>
+            <a class="personal__item">Настройка</a>
+        </div>
+    </div>
+</div>
+<div class="layout__col main">
+    <div class="layout__row">
+        <div class="layout__col news">
+            <div class="news__tabs">
+                <a class="news__tab news__head-item"></a>
+                <a class="news__tab news__head-item"></a>
+                <a class="news__tab news__head-item"></a>
+                <div class="news__head-item">
+                    <span class="news__date"></span>
+                    <a class="news__time"></a>
+                </div>
+            </div>
+            <ul class="news__news-list">
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+                <li class="news__item _important">
+                    <a class="news__content">
+                        <img class="news__icon">
+                        <span class="news__text"></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="rates">
+                <div class="rates__item">
+                    <a class="rates__name">USD MOEX</a>
+                    <span class="rates__value"></span>
+                    <span class="rates__change"></span>
+                </div>
+                <div class="rates__item">
+                    <a class="rates__name">EUR MOEX</a>
+                    <span class="rates__value"></span>
+                    <span class="rates__change"></span>
+                </div>
+                <div class="rates__item">
+                    <a class="rates__name">НЕФТЬ</a>
+                    <span class="rates__value"></span>
+                    <span class="rates__change"></span>
+                </div>
+            </div>
+        </div>
+        <div class="teaser">
+            <a class="teaser__link">
+                <img class="teaser__img">
+            </a>
+            <a class="teaser__link">
+                <span class="teaser__title"></span>
+            </a>
+            <div class="teaser__description">
+                <span class="teaser__comment"></span>
+                <span class="teaser__age"></span>
+            </div>
+        </div>
+    </div>
+    <div class="layout__row search">
+        <div class="home-logo">
+            <a class="home-logo__link" href="https://yandex.ru/">
+                <img class="home-logo__img">
+            </a>
+        </div>
+        <div class="layout__col search-bar">
+            <div class="search-bar__tabs">
+                <a class="search-bar__tab">Видео</a>
+                <a class="search-bar__tab">Картинки</a>
+                <a class="search-bar__tab">Новости</a>
+                <a class="search-bar__tab">Карты</a>
+                <a class="search-bar__tab">Маркет</a>
+                <a class="search-bar__tab">Переводчик</a>
+                <a class="search-bar__tab">Музыка</a>
+                <a class="search-bar__tab">Эфир</a>
+                <a class="search-bar__tab">ещё</a>
+            </div>
+            <div class="search-bar__wrapper">
+                <input class="search-bar__input" type="hidden">
+                <button class="search-bar__button">Найти</button>
+            </div>
+            <div class="search-bar__bottom">
+                <span class="search__sample">Найдётся всё. Например,&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <a href="" class="banner__link"></a>
+    </div>
+</div>
+<div class="sidebar">
+    <div class="card">
+        <div class="card__title">
+            <a class="card__user-name"></a>
+            <img class="card__user-img">
+        </div>
+        <div class="card__details">
+            <div class="card__mail">
+                <a class="card__mail-line">
+                    <div class="card__mail-title">Почта</div>
+                    <div class="card__mail-unread">новых нет</div>
+                </a>
+            </div>
+            <div class="card__items">
+                <a class="card__item">Написать письмо</a>
+                <a class="card__item">Деньги</a>
+                <a class="card__item">Диск</a>
+                <a class="card__item">Получить Плюс</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="menu">-->
+
+<!--</div>-->
+</body>
+
+<div style="opacity: 0; visibility: hidden">
+    <!-- inject:svg -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="bell" viewBox="0 0 16 18"><path d="M12.65 7.365C10.37 2.458 9.184.594 5.459.672 4.132.699 4.45-.29 3.438.085c-1.01.375-.143.924-1.177 1.773C-.641 4.241-.374 6.445.972 11.698c.567 2.213-1.367 2.321-.602 4.465.559 1.564 4.679 2.219 9.025.607 4.347-1.613 7.086-4.814 6.527-6.378-.765-2.145-2.311-.961-3.272-3.027zm-3.726 8.083c-3.882 1.44-7.072.594-7.207.217-.232-.65 1.253-2.816 5.691-4.463 4.438-1.647 6.915-1.036 7.174-.311.153.429-1.775 3.116-5.658 4.557zm-1.248-3.494c-2.029.753-3.439 1.614-4.353 2.389.643.584 1.847.726 3.046.281 1.527-.565 2.466-1.866 2.095-2.904l-.016-.036c-.251.082-.508.171-.772.27z"/></symbol><symbol id="eye" viewBox="0 0 24 18"><path d="M12 0C2.969 0 0 8.188 0 8.188s2.969 8.189 12 8.189c9.03 0 12-8.189 12-8.189S21.03 0 12 0zm0 14.04c-3.38 0-6.118-2.62-6.118-5.852 0-3.231 2.739-5.853 6.118-5.853 3.38 0 6.117 2.622 6.117 5.853 0 3.232-2.738 5.852-6.117 5.852zm0-5.852c-.56-.607.913-2.926 0-2.926-1.69 0-3.06 1.311-3.06 2.926 0 1.616 1.37 2.927 3.06 2.927 1.689 0 3.06-1.311 3.06-2.927 0-.743-2.584.515-3.06 0z"/></symbol><symbol id="menu" viewBox="0 0 20 20"><path d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"/></symbol></svg>
+    <!-- endinject -->
+</div>
+
+</html>
