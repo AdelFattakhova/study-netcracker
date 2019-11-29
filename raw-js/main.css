@@ -368,3 +368,7 @@ ul {
   border: none;
   background-color: gold;
 }
+.widgets__item {
+  width: 220px;
+  height: 80px;
+}
