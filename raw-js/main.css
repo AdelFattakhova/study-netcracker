@@ -333,8 +333,9 @@ template {
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
+  padding: 20px 20px;
 }
-.news .news__content::before {
+.news__content::before {
   content: "";
   float: left;
   width: 17px;
@@ -350,17 +351,17 @@ template {
 ul {
   list-style: none;
 }
-.search-bar .search-bar__tab {
+.search-bar__tab {
   float: left;
   margin-right: 20px;
 }
-.search-bar .search-bar__input {
+.search-bar__input {
   height: 36px;
   width: 100%;
   border: 2px solid gold;
   outline: 0;
 }
-.search-bar .search-bar__button {
+.search-bar__button {
   width: 88px;
   font-size: 16px;
   line-height: 34px;
