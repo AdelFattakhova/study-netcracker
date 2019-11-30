@@ -1,0 +1,76 @@
+// Common
+@import "common/normalize";
+@import "common/fonts";
+@import "common/colors";
+
+// Components
+@import "components/menu";
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.news {
+  &__content::before {
+    content:"";
+    float: left;
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABIFBMVEVHEnQAAABHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnRHEnT///90v9YiAAAAXnRSTlMAAJ0BE9DgxWhnZnLj/Pb3/f74uEVEUt3zakJQ1+4zD8k0c01PFBfR+/qtEQJ31SzsUSnSfAOoBILOJVbw6Ugw2fkVt54LBozGH1/kPzvhbQmIyA0MG8w13KSrtqOpmqo5HQAAAAFiS0dEX3PRUS0AAAAJcEhZcwAACxMAAAsTAQCanBgAAAEcSURBVDjLY4gDASZmBkYGFtY43ICNYcgoZOfg5OTi5iGskDAYeIW8fEDALwBiCgrxoQKIMFShsIiIiKiYOIgpISklggxEpWWwh6OsHAMjMmCQV8ChUJHqCom1WkJJWQUEpJVVwToY1NRxJAoNTTAQ0NIGKWTQ0dXEn3r09BmAChkYlA3wJzNZQ4g6I2P86VHDxBRssbYWgYRrJg9WZ27Bi1+hpRVYHYO1Df6sYGsHcaC9A/4848jNDDbQyZlA5nJxBatzcxfEr9DDE2KxlwT+7OrtA1Hn64c/X2v4M4AtDggMYgcDBQm8yYxBJxgCQkLD6JbC8ZroYqqjw+wEURjOoIMMmLWRFUZEAkGULDhaomMiUUCswRArpIhQCAB704l8387kFgAAAABJRU5ErkJggg==');
+    background-size: cover;
+  }
+}
+
+.rates {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+.search-bar {
+  &__tab {
+    float: left;
+    margin-right: 20px;
+  }
+  &__input {
+     height: 36px;
+     width: 100%;
+     border: 2px solid gold;
+     outline: 0;
+   }
+  &__button {
+    width: 88px;
+    font-size: 16px;
+    line-height: 34px;
+    border: none;
+    background-color: gold;
+  }
+}
+
+.widgets {
+  &__item {
+    width: 220px;
+    height: 80px;
+  }
+}
+
+
+
