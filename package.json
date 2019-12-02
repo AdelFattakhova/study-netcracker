@@ -2,11 +2,11 @@
   "name": "rawjs",
   "version": "1.0.0",
   "description": "JS Sandbox",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "svg": "gulp svg",
-    "less": "gulp less",
-    "clear": "gulp clear"
+    "build": "gulp svgstore && gulp less",
+    "start": "node server.js",
+    "start-dev": "gulp"
   },
   "author": "Adel Fattakhova",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "gulp-svgstore": "^7.0.1"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "gulp-less": "^4.0.1",
     "gulp-path": "^4.0.0",
     "less-plugin-autoprefixer": "^2.1.0",
