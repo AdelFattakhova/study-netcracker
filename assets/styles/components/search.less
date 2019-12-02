@@ -1,0 +1,43 @@
+.search {
+  margin-top: 20px;
+
+  &__tab {
+    float: left;
+    margin-right: 20px;
+    .font-big;
+    .font-blue;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-end;
+  }
+
+  &__input {
+    height: 36px;
+    width: 100%;
+    border: 2px solid @gold;
+    outline: 0;
+    margin-top: 10px;
+  }
+
+  &__button {
+    height: 36px;
+    width: 88px;
+    font-size: 16px;
+    line-height: 34px;
+    border: none;
+    background-color: @gold;
+  }
+
+  &__wrapper::after {
+    content: "";
+    border: 18px solid transparent;
+    border-left: 8px solid @gold;
+  }
+
+  &__bottom {
+    margin-top: 10px;
+  }
+}

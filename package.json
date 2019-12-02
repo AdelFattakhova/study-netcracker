@@ -8,7 +8,7 @@
     "less": "gulp less",
     "clear": "gulp clear"
   },
-  "author": "Boris Goncharov",
+  "author": "Adel Fattakhova",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
