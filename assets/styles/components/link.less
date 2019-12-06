@@ -1,31 +1,32 @@
 .link {
   text-decoration: none;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
   cursor: pointer;
 
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   &__icon {
+    width: 20px;
+    height: 20px;
+
     &._cursor {
-      width: 10px;
-      height: 10px;
+      width: 11px;
+      height: 11px;
     }
 
     &._favs {
-      width: 30px;
-      height: 30px;
       fill: @light-grey;
     }
 
     &._bell {
-      width: 20px;
-      height: 20px;
       fill: @light-grey;
     }
   }
 
   &._pale {
-    color: @light-grey;
+    color: @grey;
   }
 
   &._bold {
