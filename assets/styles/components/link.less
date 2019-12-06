@@ -1,19 +1,41 @@
 .link {
   text-decoration: none;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  cursor: pointer;
+
+  &__icon {
+    &._cursor {
+      width: 10px;
+      height: 10px;
+    }
+
+    &._favs {
+      width: 30px;
+      height: 30px;
+      fill: @light-grey;
+    }
+
+    &._bell {
+      width: 20px;
+      height: 20px;
+      fill: @light-grey;
+    }
+  }
 
   &._pale {
     color: @light-grey;
   }
 
   &._bold {
-    .font-big;
     .font-bold;
+    color: @black;
   }
 
   &._tab {
-    .font-big;
-    .font-bold;
-    .font-blue;
+    .font-bold-big;
+    color: @dark-blue;
   }
 
   &._unselected {

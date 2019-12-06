@@ -1,4 +1,18 @@
 .news {
+  max-width: 66.6%;
+
+  &-wrapper {
+    display: flex;
+    width: 936px;
+    margin-left: 43px;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 30px;
+  }
+
   &__head-item {
     margin-right: 10px;
   }
@@ -8,22 +22,25 @@
   }
 
   &__content {
+    position: relative;
+    left: 20px;
     color: @black;
   }
 
   &__date {
-    .font-light;
     .font-small;
+    color: @light-grey;
   }
 
   &__time {
-    .font-light;
     .font-small;
   }
 
   &__content::before {
     content:"";
-    float: left;
+    position: absolute;
+    top: 0;
+    left: -23px;
     width: 15px;
     height: 15px;
     margin-right: 5px;

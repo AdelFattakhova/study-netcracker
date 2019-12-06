@@ -1,31 +1,44 @@
-@font-face {
-  font-family: "Helvetica";
-  src: url("/assets/fonts/HelveticaRegular.woff") format("woff");
+.font-face(@font-family, @file-path, @font-weight) {
+  @font-face {
+    font-family: @font-family;
+    src: url("@{file-path}.woff") format("woff");
+    font-weight: @font-weight;
+  }
+}
+
+.font-face(Helvetica-Regular, "/assets/fonts/HelveticaRegular", 400);
+.font-face(Helvetica-Bold, "/assets/fonts/HelveticaBold", 500);
+
+.font(@font-family, @font-size, @font-weight) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: @font-weight;
 }
 
 .font-regular {
-  font-family: Helvetica;
-  font-size: 13px;
-  color: @black;
-}
-
-.font-big {
-  font-size: 16px;
+  .font(Helvetica-Regular, 13px, 400);
 }
 
 .font-bold {
-  font-weight: 500;
+  .font(Helvetica-Bold, 13px, 500);
 }
 
-.font-blue {
-  color: @dark-blue;
+.font-bold-big {
+  .font-bold;
+  font-size: 16px;
 }
 
-.font-light {
-  font-weight: lighter;
-  color: @light-grey;
+.font-regular-big {
+  .font-regular;
+  font-size: 15px;
+}
+
+.font-regular-bigger {
+  .font-regular;
+  font-size: 32px;
 }
 
 .font-small {
+  .font-regular;
   font-size: 12px;
 }
