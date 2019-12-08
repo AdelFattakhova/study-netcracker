@@ -301,12 +301,12 @@
 
 <script>
     const more = document.querySelector('.sidebar__card-more');
+    let card = document.querySelector(".sidebar__card._animated");
 
     function changeToFixed() {
-        let card = document.querySelector(".sidebar__card._animated");
         card.classList.toggle("_animated");
         card.classList.toggle("_fixed");
-        more.classList.add("_clicked");
+        more.classList.toggle("_clicked");
     }
 
     more.addEventListener("click", changeToFixed);
