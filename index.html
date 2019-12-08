@@ -19,18 +19,14 @@
     </div>
     <div class="header__personal personal">
         <a class="personal__item link">
-            <div class="link__icon-wrapper">
-                <svg class="link__icon _favs">
-                    <use href="#favorites"></use>
-                </svg>
-            </div>
+            <svg class="link__icon _favs">
+                <use href="#favorites"></use>
+            </svg>
         </a>
         <a class="personal__item link">
-            <div class="link__icon-wrapper">
-                <svg class="link__icon _bell">
-                    <use href="#bell"></use>
-                </svg>
-            </div>
+            <svg class="link__icon _bell">
+                <use href="#bell"></use>
+            </svg>
         </a>
         <a class="personal__item link">Настройка</a>
     </div>
@@ -40,9 +36,9 @@
         <section class="layout__row news-wrapper">
             <section class="layout__col news-wrapper_news news">
                 <nav class="layout__row news__tabs">
-                    <a href="" class="news__head-item link _tab">Сейчас в СМИ</a>
-                    <a href="" class="news__head-item link _tab _unselected">в Москве</a>
-                    <a href="" class="news__head-item link _tab _unselected">Рекомендуем</a>
+                    <a href="" class="news__head-item link">Сейчас в СМИ</a>
+                    <a href="" class="news__head-item link _unselected">в Москве</a>
+                    <a href="" class="news__head-item link _unselected">Рекомендуем</a>
                     <div class="news__head-item">
                         <span class="news__date">2.12</span>
                         <a href="" class="news__time link _pale">11:41</a>
@@ -139,28 +135,133 @@
         </section>
         <section class="layout__row widgets">
             <div class="widgets__item">
-                <a href="" class="widgets__title link _tab">Погода</a>
-                <a class="widgets__content link">
-                    <div class="widgets__img _weather"></div>
-                    <span class="widgets__info">+1°</span>
-                </a>
+                <div class="widgets__title">
+                    <a href="" class="link _tab">Погода</a>
+                    <div class="widgets__title-more"></div>
+                </div>
+                <div class="widgets__content">
+                    <a href="" class="widgets__info link">
+                        <div class="widgets__img _weather"></div>
+                        <span class="widgets__num">+1°</span>
+                    </a>
+                    <div class="widgets__text">
+                        <a href="" class="link">Днём +2,&nbsp;</a>
+                        <br>
+                        <a href="" class="link">вечером +1</a>
+                    </div>
+                </div>
             </div>
             <div class="widgets__item">
-                <a href="" class="widgets__title link _tab">Пробки</a>
+                <div class="widgets__title">
+                    <a href="" class="link _tab">Пробки</a>
+                    <div class="widgets__title-more"></div>
+                </div>
+                <div class="widgets__content">
+                    <a href="" class="widgets__info link">
+                        <div class="widgets__img _traffic"></div>
+                        <span class="widgets__num">2</span>
+                    </a>
+                    <div class="widgets__text">
+                        <a href="" class="link">До 17 ч. дороги свободны</a>
+                    </div>
+                </div>
             </div>
             <div class="widgets__item">
-                <a href="" class="widgets__title link _tab">Карта Москвы</a>
+                <div class="widgets__title">
+                    <a href="" class="link _tab">Карта Москвы</a>
+                    <div class="widgets__title-more"></div>
+                </div>
+                <ul class="widgets__list _map">
+                    <li class="widgets__list-item">
+                        <a href="" class="link">Метро</a>
+                    </li>
+                    <li class="widgets__list-item">
+                        <a href="" class="link">Такси</a>
+                    </li>
+                    <li class="widgets__list-item">
+                        <a href="" class="link">Расписания</a>
+                    </li>
+                    <li class="widgets__list-item">
+                        <a href="" class="link">Сообщество соседей</a>
+                    </li>
+                </ul>
             </div>
             <div class="widgets__item">
-                <a href="" class="widgets__title link _tab">Посещаемое</a>
+                <div class="widgets__title">
+                    <a href="" class="link _tab">Посещаемое</a>
+                    <div class="widgets__title-more"></div>
+                </div>
+                <ul class="widgets__list _visit">
+                    <li class="widgets__list-item">
+                        <a href="" class="link _bold">Недвижимость</a>
+                        —
+                        <a href="" class="link">о сталинках</a>
+                    </li>
+                    <li class="widgets__list-item">
+                        <a href="" class="link _bold">Авто.ру</a>
+                        —
+                        <a href="" class="link">автомобили до 300 000</a>
+                    </li>
+                    <li class="widgets__list-item">
+                        <a href="" class="link _bold">Беру</a>
+                        —
+                        <a href="" class="link">продукты</a>
+                    </li>
+                </ul>
             </div>
             <div class="widgets__item">
-                <a href="" class="widgets__title link _tab">Телепрограмма</a>
+                <div class="widgets__title">
+                    <a href="" class="link _tab">Телепрограмма</a>
+                    <div class="widgets__title-more"></div>
+                </div>
+                <ul class="widgets__list _tv">
+                    <li class="widgets__list-item">
+                        16:35
+                        <a href="" class="link">Ми-ми-мишки</a>
+                        <a href="" class="link _pale">Карусель</a>
+                    </li>
+                    <li class="widgets__list-item">
+                        16:40
+                        <a href="" class="link">Шеф. Новая жизнь</a>
+                        <a href="" class="link _pale">Пятый канал</a>
+                    </li>
+                    <li class="widgets__list-item">
+                        16:45
+                        <a href="" class="link">Ивановы-Ивановы</a>
+                        <a href="" class="link _pale">СТС</a>
+                    </li>
+                </ul>
             </div>
             <div class="widgets__item">
-                <a href="" class="widgets__title link _tab">Эфир</a>
-                <a href="" class="widgets__title link _tab _unselected">Фильмы</a>
-                <a href="" class="widgets__title link _tab _unselected">Сериалы</a>
+                <div class="widgets__title">
+                    <a href="" class="link _tab">Эфир</a>
+                    <a href="" class="link _tab _unselected">Фильмы</a>
+                    <a href="" class="link _tab _unselected">Сериалы</a>
+                    <div class="widgets__title-more"></div>
+                </div>
+                <ul class="widgets__list _stream">
+                    <li class="widgets__list-item">
+                        <div class="widgets__stream-icon"></div>
+                        <a href="" class="link">
+                            События. Итоги недели
+                            <span class="link__extra">ОТВ 24</span>
+                        </a>
+                    </li>
+                    <li class="widgets__list-item">
+                        <div class="widgets__stream-icon"></div>
+                        <a href="" class="link">
+                            Канон Иисусу Сладчайшему
+                            <span class="link__extra">СОЮЗ</span>
+                        </a>
+                    </li>
+                    <li class="widgets__list-item">
+                        <div class="widgets__stream-icon"></div>
+                        <a href="" class="link">
+                            Главное с Ольгой Беловой
+                            <span class="link__extra">Звезда</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
         <aside class="sidebar">
@@ -191,15 +292,29 @@
                 </ul>
             </section>
             <section class="sidebar__card-wrapper">
+                <div class="sidebar__card-more"></div>
                 <section class="sidebar__card _animated"></section>
             </section>
         </aside>
     </section>
 </main>
 
+<script>
+    const more = document.querySelector('.sidebar__card-more');
+
+    function changeToFixed() {
+        let card = document.querySelector(".sidebar__card._animated");
+        card.classList.toggle("_animated");
+        card.classList.toggle("_fixed");
+        more.classList.add("_clicked");
+    }
+
+    more.addEventListener("click", changeToFixed);
+</script>
+
 </body>
 
-<div class="svg" style="">
+<div class="_hidden" style="">
     <!-- inject:svg -->
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <symbol id="bell" viewBox="0 0 469.333 469.333">
@@ -223,6 +338,11 @@
                 <path d="M26.841 53.707v14.288h4.156V30.004H24.79c-6.098 0-11.225 4.119-11.225 12.145 0 5.726 2.267 8.83 5.667 10.542L12 67.995h4.803l6.584-14.288h3.454zm-.013-3.333h-2.212c-3.616 0-6.585-1.98-6.585-8.134 0-6.367 3.238-8.64 6.585-8.64h2.212v16.774z"
                       fill="red"/>
             </g>
+        </symbol>
+        <symbol id="more-h" viewBox="0 0 24 24">
+            <circle cx="16" cy="12" r="1"/>
+            <circle cx="12" cy="12" r="1"/>
+            <circle cx="8" cy="12" r="1"/>
         </symbol>
     </svg>
     <!-- endinject -->

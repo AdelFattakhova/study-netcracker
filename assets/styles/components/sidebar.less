@@ -8,7 +8,7 @@
     position: relative;
     width: 160px;
     padding: 12px 10px 1px;
-    margin-right: 10px;
+    margin-right: 13px;
     margin-bottom: 8px;
     border-radius: 3px;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1), 0 2px 6px 0 rgba(0, 0, 0, .1);
@@ -22,10 +22,6 @@
       margin-top: 10px;
     }
 
-    &-link {
-      color: @black;
-    }
-
     &-wrapper {
       display: flex;
       flex-direction: column;
@@ -35,7 +31,21 @@
       right: 0;
       width: 210px;
       height: 143px;
-      cursor: pointer;
+    }
+
+    &-more {
+      position: absolute;
+      top: 10px;
+      right: 2px;
+      width: 24px;
+      height: 24px;
+      background-image: url("/assets/icons/more-h.svg");
+      opacity: 0;
+      transition: opacity 0.15s 0s;
+
+      &._clicked {
+        opacity: 0.3;
+      }
     }
 
     &._animated {
@@ -44,13 +54,32 @@
       top: 0;
       right: 2px;
       transition: transform 0.15s ease-out;
+      cursor: pointer;
+    }
+
+    &-wrapper:hover &-more {
+      opacity: 0.3;
+      transition: opacity 0.15s ease-out 0.35s;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0s ease-out 0s;
+        cursor: pointer;
+      }
     }
 
     &-wrapper:hover > &._animated {
       transform: translateX(-20px);
     }
-  }
 
+    &._fixed {
+      position: absolute;
+      height: 130px;
+      top: 0;
+      right: 2px;
+      transform: translateX(-20px);
+    }
+  }
 
   &__username {
     .font-bold;

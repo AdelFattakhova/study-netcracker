@@ -1,11 +1,7 @@
 .link {
   text-decoration: none;
   cursor: pointer;
-
-  &__icon-wrapper {
-    display: flex;
-    justify-content: center;
-  }
+  color: @black;
 
   &__icon {
     width: 20px;
@@ -25,16 +21,21 @@
     }
   }
 
+  &__extra {
+    color: @grey;
+    margin-left: 5px;
+  }
+
   &._pale {
     color: @grey;
   }
 
   &._bold {
     .font-bold;
-    color: @black;
   }
 
   &._tab {
+    margin-right: 4px;
     .font-bold-big;
     color: @dark-blue;
   }
