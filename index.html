@@ -120,6 +120,12 @@
                         </a>
                     </div>
                     <input class="search__input" type="search">
+                    <div class="search__input-icons">
+                        <svg class="search__input-icon _mic">
+                            <use href="#mic"></use>
+                        </svg>
+                        <div class="search__input-icon _keys"></div>
+                    </div>
                     <button class="search__button" type="submit">Найти</button>
                 </form>
                 <div class="search__bottom">
@@ -140,9 +146,9 @@
                     <div class="widgets__title-more"></div>
                 </div>
                 <div class="widgets__content">
-                    <a href="" class="widgets__info link">
+                    <a href="" class="widgets__info">
                         <div class="widgets__img _weather"></div>
-                        <span class="widgets__num">+1°</span>
+                        +1°
                     </a>
                     <div class="widgets__text">
                         <a href="" class="link">Днём +2,&nbsp;</a>
@@ -157,9 +163,9 @@
                     <div class="widgets__title-more"></div>
                 </div>
                 <div class="widgets__content">
-                    <a href="" class="widgets__info link">
+                    <a href="" class="widgets__info">
                         <div class="widgets__img _traffic"></div>
-                        <span class="widgets__num">2</span>
+                        2
                     </a>
                     <div class="widgets__text">
                         <a href="" class="link">До 17 ч. дороги свободны</a>
@@ -300,8 +306,8 @@
 </main>
 
 <script>
-    const more = document.querySelector('.sidebar__card-more');
-    let card = document.querySelector(".sidebar__card._animated");
+    const more = document.querySelector(".sidebar__card-more");
+    const card = document.querySelector(".sidebar__card._animated");
 
     function changeToFixed() {
         card.classList.toggle("_animated");
@@ -338,6 +344,10 @@
                 <path d="M26.841 53.707v14.288h4.156V30.004H24.79c-6.098 0-11.225 4.119-11.225 12.145 0 5.726 2.267 8.83 5.667 10.542L12 67.995h4.803l6.584-14.288h3.454zm-.013-3.333h-2.212c-3.616 0-6.585-1.98-6.585-8.134 0-6.367 3.238-8.64 6.585-8.64h2.212v16.774z"
                       fill="red"/>
             </g>
+        </symbol>
+        <symbol id="mic" viewBox="0 0 18 18">
+            <path d="M9 11.25A2.25 2.25 0 0011.25 9V5.062a2.25 2.25 0 00-4.5 0V9A2.25 2.25 0 009 11.25zM13.5 9h-1.125c0 .848-.32 1.668-.898 2.289a3.37 3.37 0 01-4.954.004A3.372 3.372 0 015.625 9H4.5a4.491 4.491 0 003.937 4.461v1.727h1.125v-1.727A4.494 4.494 0 0013.499 9zm0 0"
+                  fill-rule="evenodd"/>
         </symbol>
         <symbol id="more-h" viewBox="0 0 24 24">
             <circle cx="16" cy="12" r="1"/>

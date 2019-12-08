@@ -13,11 +13,21 @@
     }
 
     &._favs {
-      fill: @light-grey;
+      opacity: 0.2;
+      transition: opacity 0.15s ease-out;
+
+      &:hover {
+        opacity: 0.3;
+      }
     }
 
     &._bell {
-      fill: @light-grey;
+      opacity: 0.2;
+      transition: opacity 0.15s ease-out;
+
+      &:hover {
+        opacity: 0.3;
+      }
     }
   }
 

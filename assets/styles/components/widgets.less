@@ -55,7 +55,14 @@
   &__info {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    cursor: pointer;
     .font-regular-bigger;
+    color: @black;
+
+    &:hover {
+      color: @red;
+    }
   }
 
   &__text {
@@ -67,13 +74,10 @@
 
     &-item {
       position: relative;
-    }
-
-    & > li {
       margin-bottom: 8px;
     }
 
-    &._map > li {
+    &._map > &-item {
       display: inline-block;
       margin-right: 10px;
     }
