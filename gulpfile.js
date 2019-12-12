@@ -10,7 +10,7 @@ const autoprefixer                  = require('gulp-autoprefixer'); // npm insta
 
 gulp.task('svgstore', function () {
     const svgs = gulp
-        .src('./assets/icons/**/*.svg')
+        .src('./yandex/assets/icons/**/*.svg')
         .pipe(svgmin(function (file) {
             const prefix = path.basename(file.relative, path.extname(file.relative));
             return {
@@ -42,13 +42,13 @@ gulp.task('svgstore', function () {
     }
 
     return gulp
-        .src('./index.html')
+        .src('./yandex/index.html')
         .pipe(inject(svgs, {transform: fileContents}))
         .pipe(gulp.dest('./'));
 });
 
 gulp.task('less', function () {
-    return src('./assets/styles/main.less')
+    return src('./yandex/assets/styles/main.less')
         .pipe(less())
         .pipe(autoprefixer({
             cascade: false
@@ -63,9 +63,9 @@ gulp.task('serve', function () {
             baseDir: "./"
         }
     });
-    gulp.watch("./assets/styles/**/*.less").on("change", series("less"));
-    gulp.watch("./main.css").on("change", browserSync.reload);
-    gulp.watch("./index.html").on("change", browserSync.reload);
+    gulp.watch("./yandex/assets/styles/**/*.less").on("change", series("less"));
+    gulp.watch("./yandex/main.css").on("change", browserSync.reload);
+    gulp.watch("./yandex/index.html").on("change", browserSync.reload);
 });
 
 gulp.task('default', series(parallel('less', 'svgstore'), 'serve'));
