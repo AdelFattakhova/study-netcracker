@@ -23,6 +23,7 @@
     "gulp-less": "^4.0.1",
     "gulp-path": "^4.0.0",
     "less-plugin-autoprefixer": "^2.1.0",
-    "normalize.less": "^1.0.0"
+    "normalize.less": "^1.0.0",
+    "require-dir": "^1.2.0"
   }
 }
