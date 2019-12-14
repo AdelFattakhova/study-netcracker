@@ -1,0 +1,64 @@
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: @black;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    &._cursor {
+      width: 11px;
+      height: 11px;
+    }
+
+    &._favs {
+      opacity: 0.2;
+      transition: opacity 0.15s ease-out;
+
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+
+    &._bell {
+      opacity: 0.2;
+      transition: opacity 0.15s ease-out;
+
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__extra {
+    color: @grey;
+    margin-left: 5px;
+  }
+
+  &._pale {
+    color: @grey;
+  }
+
+  &._bold {
+    .font-bold;
+  }
+
+  &._tab {
+    margin-right: 4px;
+    .font-bold-big;
+    color: @dark-blue;
+  }
+
+  &._unselected {
+    color: @light-blue;
+  }
+
+  &._plus {
+    color: @blue;
+  }
+
+  &:hover {
+    color: @red;
+  }
+}

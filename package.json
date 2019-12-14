@@ -4,7 +4,7 @@
   "description": "JS Sandbox",
   "main": "server.js",
   "scripts": {
-    "build": "gulp html",
+    "build": "gulp html && gulp prebuild",
     "start": "node server.js",
     "start-dev": "gulp"
   },

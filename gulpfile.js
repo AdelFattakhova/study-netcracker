@@ -8,6 +8,16 @@ const inject = require('gulp-inject'); // npm install gulp-inject --save-dev
 const path = require('path'); // installed with npm install gulp -g
 const autoprefixer = require('gulp-autoprefixer'); // npm install --save-dev gulp-autoprefixer
 
+gulp.task('prebuild', async function () {
+    const yandexAssets = gulp
+        .src('./yandex/assets/**/*')
+        .pipe(gulp.dest('dist/yandex/assets'))
+
+    const mailAssets = gulp
+        .src('./mail/assets/**/*')
+        .pipe(gulp.dest('dist/mail/assets'));
+});
+
 gulp.task("html", function () {
     return gulp
         .src('./index.html')
@@ -108,16 +118,6 @@ gulp.task('m-less', function () {
             cascade: false
         }))
         .pipe(dest('dist/mail/'));
-});
-
-gulp.task('prebuild', async function () {
-    const yandexAssets = gulp
-        .src('./yandex/assets/**/*')
-        .pipe(gulp.dest('dist/yandex/assets'))
-
-    const mailAssets = gulp
-        .src('./mail/assets/**/*')
-        .pipe(gulp.dest('dist/mail/assets'));
 });
 
 gulp.task('serve', function () {
