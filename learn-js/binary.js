@@ -25,13 +25,16 @@ const binarySearch = (arr, num) => {
     return num === arr[middle] ? middle : null;
 };
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const num = 11;
+const main = () => {
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const num = 11;
 
-const result = binarySearch(arr, num);
+    const result = binarySearch(arr, num);
 
-if (result === null) {
-    console.log("Число не найдено :(");
-    return;
-}
-console.log(result);
+    if (result === null) {
+        console.log("Число не найдено :(");
+        return;
+    }
+    console.log(result);
+};
+main();
