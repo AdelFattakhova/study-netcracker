@@ -3,7 +3,7 @@
  *
  * @param arr - упорядоченный массив целых чисел
  * @param num - число, индекс которого надо найти в массиве
- * @returns {any} - найденный индекс числа либо null, если число не найдено
+ * @returns {number | null} - найденный индекс числа либо null, если число не найдено
  */
 
 const binarySearch = (arr, num) => {
@@ -26,8 +26,12 @@ const binarySearch = (arr, num) => {
 };
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const num = prompt("Введите число:");
+const num = 11;
 
-let result = binarySearch(arr, num);
-result === null ? result = "Число не найдено :(" : result;
+const result = binarySearch(arr, num);
+
+if (result === null) {
+    console.log("Число не найдено :(");
+    return;
+}
 console.log(result);
