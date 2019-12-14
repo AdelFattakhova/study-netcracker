@@ -2,16 +2,17 @@
   "name": "rawjs",
   "version": "1.0.0",
   "description": "JS Sandbox",
-  "main": "mail/server.js && yandex/server.js",
+  "main": "server.js",
   "scripts": {
-    "build": "gulp svgstore && gulp less",
-    "start": "node mail/server.js && node yandex/server.js",
+    "build": "gulp html",
+    "start": "node server.js",
     "start-dev": "gulp"
   },
   "author": "Adel Fattakhova",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-inject": "^5.0.4",
