@@ -306,12 +306,12 @@ template {
 }
 @font-face {
   font-family: Helvetica-Regular;
-  src: url("/assets/fonts/HelveticaRegular.woff") format("woff");
+  src: url("assets/fonts/HelveticaRegular.woff") format("woff");
   font-weight: 400;
 }
 @font-face {
   font-family: Helvetica-Bold;
-  src: url("/assets/fonts/HelveticaBold.woff") format("woff");
+  src: url("assets/fonts/HelveticaBold.woff") format("woff");
   font-weight: 500;
 }
 .font-regular {
@@ -676,7 +676,7 @@ ul {
   margin-right: 10px;
 }
 .widgets__img._weather {
-  background-image: url("/assets/images/cloud.png");
+  background-image: url("assets/images/cloud.png");
   width: 45px;
   height: 45px;
 }
@@ -772,7 +772,7 @@ ul {
   right: 2px;
   width: 24px;
   height: 24px;
-  background-image: url("/assets/icons/more-h.svg");
+  background-image: url("assets/icons/more-h.svg");
   opacity: 0;
   -webkit-transition: opacity 0.15s 0s;
   transition: opacity 0.15s 0s;
@@ -831,7 +831,7 @@ ul {
   right: 10px;
   width: 34px;
   height: 34px;
-  background-image: url("/assets/images/user-img.png");
+  background-image: url("assets/images/user-img.png");
   background-size: cover;
 }
 .teaser {
@@ -850,7 +850,7 @@ ul {
   margin-bottom: -7px;
   height: 90px;
   width: 120px;
-  background: url("/assets/images/teaser-img.png");
+  background: url("assets/images/teaser-img.png");
   background-size: cover;
 }
 .teaser__description {
@@ -863,6 +863,6 @@ ul {
   margin-left: 70px;
   height: 90px;
   width: 728px;
-  background: url("/assets/images/banner.png");
+  background: url("assets/images/banner.png");
   background-size: cover;
 }
