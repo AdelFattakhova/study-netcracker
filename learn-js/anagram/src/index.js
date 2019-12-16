@@ -1,30 +1,32 @@
+const MIN_GROUP = 2;
+
 /**
- * Функция принимает на вход массив слов и объединяет их в группы слов-анаграмм.
- * @param arr - массив слов
- * @returns {this} - массив групп слов-анаграмм
+ * This function takes an array of words and makes groups of anagrams
+ *
+ * @param arr - array of words
+ * @returns {this} - array of groups of anagrams
  */
 
 const anagram = (arr) => {
     let result = [];
-    let map = new Map();
+    let obj = {};
 
-    for (let word of arr) {
+    arr.forEach((word) => {
         let sorted = word.split('').sort().join('');
-        map.set(word, sorted);
-    }
-
-    let keys = Array.from(map.keys());
-
-    for (let i = 0; i < keys.length; i++) {
-        let pair = [];
-
-        for (let j = i + 1; j < keys.length; j++) {
-            if (map.get(keys[i]) === map.get(keys[j])) {
-                pair.push(keys[i], keys[j]);
-                result.push(pair.sort());
-            }
+        if (sorted in obj) {
+            obj[sorted].push(word);
+        } else {
+            obj[sorted] = [word];
         }
-    }
+    });
+
+    Object.values(obj).forEach((value) => {
+        let anagrams = [...value];
+
+        if (anagrams.length >= MIN_GROUP) {
+            result.push(anagrams.sort());
+        }
+    });
 
     return result.sort();
 };
