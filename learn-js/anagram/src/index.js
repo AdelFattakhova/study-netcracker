@@ -8,12 +8,12 @@ const MIN_GROUP = 2;
  */
 
 const anagram = (arr) => {
-    let result = [];
-    let obj = {};
+    const result = [];
+    const obj = {};
 
     arr.forEach((word) => {
         let sorted = word.split('').sort().join('');
-        if (sorted in obj) {
+        if (obj.hasOwnProperty(sorted)) {
             obj[sorted].push(word);
         } else {
             obj[sorted] = [word];
