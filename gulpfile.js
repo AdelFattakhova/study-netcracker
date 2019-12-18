@@ -128,8 +128,8 @@ gulp.task('serve', function () {
     });
     gulp.watch("./yandex/assets/styles/**/*.less").on("change", series("ya-less"));
     gulp.watch("./mail/assets/styles/**/*.less").on("change", series("m-less"));
-    gulp.watch("./yandex/main.css").on("change", browserSync.reload);
-    gulp.watch("./mail/main.css").on("change", browserSync.reload);
+    gulp.watch("./yandex/assets/styles/**/*.less").on("change", browserSync.reload);
+    gulp.watch("./mail/assets/styles/**/*.less").on("change", browserSync.reload);
     gulp.watch("./yandex/index.html").on("change", browserSync.reload);
     gulp.watch("./mail/index.html").on("change", browserSync.reload);
 });
