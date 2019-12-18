@@ -7,20 +7,20 @@ const MIN_GROUP = 2;
  * @returns {this} - array of groups of anagrams
  */
 
-const anagram = (arr) => {
+const anagram = arr => {
     const result = [];
-    const obj = {};
+    const words = {};
 
-    arr.forEach((word) => {
+    arr.forEach(word => {
         let sorted = word.split('').sort().join('');
-        if (obj.hasOwnProperty(sorted)) {
-            obj[sorted].push(word);
+        if (words.hasOwnProperty(sorted)) {
+            words[sorted].push(word);
         } else {
-            obj[sorted] = [word];
+            words[sorted] = [word];
         }
     });
 
-    Object.values(obj).forEach((value) => {
+    Object.values(words).forEach(value => {
         let anagrams = [...value];
 
         if (anagrams.length >= MIN_GROUP) {
