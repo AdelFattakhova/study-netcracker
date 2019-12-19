@@ -8,6 +8,18 @@ const inject = require('gulp-inject'); // npm install gulp-inject --save-dev
 const path = require('path'); // installed with npm install gulp -g
 const autoprefixer = require('gulp-autoprefixer'); // npm install --save-dev gulp-autoprefixer
 
+// function addHtml (source, folder) {
+//     return gulp
+//         .src(source)
+//         .pipe(gulp.dest(folder));
+// }
+//
+// gulp.task('html', addHtml('./index.html', 'dist'));
+//
+// gulp.task('ya-html', addHtml('./yandex/index.html', 'dist/yandex/'));
+//
+// gulp.task('m-html', addHtml('./mail/index.html', 'dist/mail/'));
+
 gulp.task('prebuild', async function () {
     const yandexAssets = gulp
         .src('./yandex/assets/**/*')
@@ -22,6 +34,18 @@ gulp.task("html", function () {
     return gulp
         .src('./index.html')
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task("ya-html", function () {
+    return gulp
+        .src('./yandex/index.html')
+        .pipe(gulp.dest('dist/yandex/'));
+});
+
+gulp.task("m-html", function () {
+    return gulp
+        .src('./mail/index.html')
+        .pipe(gulp.dest('dist/mail/'));
 });
 
 gulp.task('ya-svgstore', function () {
@@ -60,7 +84,7 @@ gulp.task('ya-svgstore', function () {
     return gulp
         .src('./yandex/index.html')
         .pipe(inject(svgs, {transform: fileContents}))
-        .pipe(gulp.dest('dist/yandex/'));
+        .pipe(gulp.dest('yandex'));
 });
 
 gulp.task('m-svgstore', function () {
@@ -99,7 +123,7 @@ gulp.task('m-svgstore', function () {
     return gulp
         .src('./mail/index.html')
         .pipe(inject(svgs, {transform: fileContents}))
-        .pipe(gulp.dest('dist/mail/'));
+        .pipe(gulp.dest('mail'));
 });
 
 gulp.task('ya-less', function () {
@@ -130,8 +154,10 @@ gulp.task('serve', function () {
     gulp.watch("./mail/assets/styles/**/*.less").on("change", series("m-less"));
     gulp.watch("./yandex/assets/styles/**/*.less").on("change", browserSync.reload);
     gulp.watch("./mail/assets/styles/**/*.less").on("change", browserSync.reload);
+    gulp.watch("./yandex/index.html").on("change", series("ya-html"));
+    gulp.watch("./mail/index.html").on("change", series("m-html"));
     gulp.watch("./yandex/index.html").on("change", browserSync.reload);
     gulp.watch("./mail/index.html").on("change", browserSync.reload);
 });
 
-gulp.task('default', series(parallel('html', 'ya-less', 'm-less', 'ya-svgstore', 'm-svgstore', 'prebuild'), 'serve'));
+gulp.task('default', series(parallel('html', 'ya-html', 'm-html', 'ya-less', 'm-less', 'ya-svgstore', 'm-svgstore', 'prebuild'), 'serve'));

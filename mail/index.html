@@ -9,57 +9,178 @@
 <body>
 <header class="header">
     <nav class="header__services">
-        <a href="" class="header__item link _bold">Mail.ru</a>
-        <a href="" class="header__item link">Почта</a>
-        <a href="" class="header__item link">Мой Мир</a>
-        <a href="" class="header__item link">Одноклассники</a>
-        <a href="" class="header__item link">Игры</a>
-        <a href="" class="header__item link">Знакомства</a>
-        <a href="" class="header__item link">Новости</a>
-        <a href="" class="header__item link">Поиск</a>
-        <a href="" class="header__item link">Все проекты</a>
+        <a href="" class="header__services-item link _bold">Mail.ru</a>
+        <a href="" class="header__services-item link">Почта</a>
+        <a href="" class="header__services-item link">Мой Мир</a>
+        <a href="" class="header__services-item link">Одноклассники</a>
+        <a href="" class="header__services-item link">Игры</a>
+        <a href="" class="header__services-item link">Знакомства</a>
+        <a href="" class="header__services-item link">Новости</a>
+        <a href="" class="header__services-item link">Поиск</a>
+        <a href="" class="header__services-item link">Все проекты</a>
     </nav>
     <nav class="header__profile">
-        <a href="" class="header__item link">Регистрация</a>
-        <a href="" class="header__item link">Вход</a>
+        <a href="" class="header__profile-item link">Регистрация</a>
+        <a href="" class="header__profile-item link">Вход</a>
     </nav>
 </header>
 <main class="layout">
-    <section class="search">
-        <nav></nav>
-        <form>
-            <input>
-            <button></button>
-        </form>
-    </section>
-    <section class="layout_col">
+    <aside class="sidebar">
+        <section class="mail">
+            <div class="mail__img"></div>
+            <form class="mail__login">
+                <div class="mail__head">
+                    <a class="mail__link _underlined">Почта</a>
+                    <a class="mail__link">
+                        <svg class="mail__icon _cloud">
+                            <use href="#cloud"></use>
+                        </svg>
+                    </a>
+                    <a class="mail__link">
+                        <svg class="mail__icon _calendar">
+                            <use href="#calendar"></use>
+                        </svg>
+                        <span class="mail__link-day">19</span>
+                    </a>
+                </div>
+                <input class="mail__input" type="text" placeholder="Имя ящика">
+                <select class="mail__select">
+                    <option class="mail__option" selected="selected">@mail.ru</option>
+                    <option class="mail__option">@inbox.ru</option>
+                    <option class="mail__option">@list.ru</option>
+                    <option class="mail__option">@bk.ru</option>
+                </select>
+                <button class="mail__button">Ввести пароль</button>
+                <label class="mail__remember">
+                    <input class="mail__remember-check" type="checkbox" checked="checked">
+                    &nbsp;Запомнить
+                </label>
+                <a class="mail__restore">Забыли пароль?</a>
+                <a class="mail__create">Создать почту</a>
+            </form>
+        </section>
         <section class="projects">
-            <section class="projects__mail">
-
-            </section>
-            <section class="projects__others">
-
-            </section>
-            <section class="banner"></section>
+            <a class="projects__item">
+                <div class="projects__item-img _cloud"></div>
+                <span class="projects__item-name">Облако</span>
+            </a>
+            <a class="projects__item">
+                <div class="projects__item-img _world"></div>
+                <span class="projects__item-name">Мой Мир</span>
+            </a>
+            <a class="projects__item">
+                <div class="projects__item-img _social"></div>
+                <span class="projects__item-name">Одноклассники</span>
+            </a>
+            <a class="projects__item">
+                <div class="projects__item-img _yula"></div>
+                <span class="projects__item-name">Юла</span>
+            </a>
+            <a class="projects__item">
+                <div class="projects__item-img _horoscope"></div>
+                <span class="projects__item-name">Гороскоп: Скорпион</span>
+            </a>
+            <a class="projects__item">
+                <div class="projects__item-img _tv"></div>
+                <span class="projects__item-name">ТВ-программа</span>
+            </a>
+            <a class="projects__item">
+                <div class="projects__item-img _combo"></div>
+                <span class="projects__item-name">Подписка Комбо</span>
+            </a>
+        </section>
+        <section class="banner"></section>
+    </aside>
+    <section class="layout__col">
+        <section class="search">
+            <nav class="search__tabs">
+                <a class="search__tab link _selected">Поиск в интернете</a>
+                <a class="search__tab link">Картинки</a>
+                <a class="search__tab link">Видео</a>
+                <a class="search__tab link">Ответы</a>
+            </nav>
+            <form class="search__wrapper">
+                <input class="search__input" type="search">
+                <button class="search__button" type="submit">Найти</button>
+            </form>
         </section>
         <section class="news">
-            <nav class="news__tabs"></nav>
+            <nav class="news__tabs">
+                <a class="news__tab _selected">Новости</a>
+                <a class="news__tab">Москва</a>
+                <a class="news__tab">Спорт</a>
+                <a class="news__tab">Леди</a>
+                <a class="news__tab">Авто</a>
+                <a class="news__tab">Кино</a>
+                <a class="news__tab">Hi-Tech</a>
+                <a class="news__tab">
+                    <svg class="news__tab-more">
+                        <use href="#more"></use>
+                    </svg>
+                </a>
+            </nav>
             <a class="news__main-news">
                 <div class="news__img"></div>
-                <span class="news__news-item"></span>
-                <span class="news__description"></span>
+                <div class="news__news-item">
+                    <span class="news__news-content">США не заявили России о выходе из Договора по открытому небу</span>
+                    <br>
+                    <span class="news__description">СМИ сообщали, что США могут принять решение о выходе из</span>
+                </div>
             </a>
             <ul class="news__news-list">
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
-                <li class="news__news-item"></li>
+                <li class="news__news-item">
+                    <a class="news__news-content link" href="">
+                        Тарасову требуют отстранить от комментирования фигурного катания
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-content link" href="">
+                        Володин объяснил, почему врачи в регионах не получают 80 тысяч
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-content link" href="">
+                        Яровая назвала систему в вузах РФ "миной замедленного действия"
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-content link" href="">
+                        Стало известно, что "охраняли" истуканы острова Пасхи
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-content link" href="">
+                        Названа лучшая актриса десятилетия
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-content link" href="">
+                        Гадкий утёнок: как выглядят птенцы разных видов (фото)
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-content link" href="">
+                        На пляж в Австралии вынесло странное фиолетовое существо
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-theme link">ЛЕДИ</a>
+                    <a class="news__news-content link">
+                        36-летняя Алсу в ультракоротком платье произвела фурор в Кремле
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-theme link">АВТО</a>
+                    <a class="news__news-content link">
+                        "АВТОВАЗ" рассекретил обновленную "Ниву" (фото)
+                    </a>
+                </li>
+                <li class="news__news-item">
+                    <a class="news__news-theme link">ДОМ</a>
+                    <a class="news__news-content link">
+                        Москвичи раскритиковали кладбищенский стиль перехода в центре
+                    </a>
+                </li>
             </ul>
             <section class="banner"></section>
             <section class="news__widgets">
@@ -92,7 +213,9 @@
             </section>
         </section>
         <section class="entertain">
-            <section class="entertain__ads"></section>
+            <section class="entertain__ads">
+                <div class="entertain__ads-img"></div>
+            </section>
             <section class="entertain__games">
                 <nav class="entertain__games-tabs"></nav>
                 <div class="entertain__games-items">
@@ -102,6 +225,7 @@
             </section>
         </section>
     </section>
+
 </main>
 <footer class="footer">
     <nav class="footer__items">
@@ -114,4 +238,35 @@
     </nav>
 </footer>
 </body>
+
+<div class="_hidden">
+    <!-- inject:svg -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="calendar" viewBox="0 0 14 15">
+            <path d="M12 15H2a2 2 0 01-2-2V3a2 2 0 011.999-2 1 1 0 012 0h6a1 1 0 012 0H12a2 2 0 012 2v10a2 2 0 01-2 2zM2.999 3a1 1 0 110 2 1 1 0 010-2zm8 0a1 1 0 110 2 1 1 0 010-2z"
+                  fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="cloud" viewBox="0 0 16 12">
+            <path d="M12.285 11.796c-.76 0-1.53-.668-2.118-1.086-.509.754-1.504 1.29-2.44 1.29-.983 0-2.118-.39-2.677-1.374a2.162 2.162 0 01-1.907 1.17C1.407 11.796 0 10.294 0 8.44c0-1.36.892-2.318 1.983-2.844-.08-.254-.256-.737-.256-1.02 0-1.403 1.066-2.542 2.381-2.542.366 0 .843.233 1.153.39C5.854 1.077 7.003 0 8.489 0c2.022 0 3.923 1.476 3.317 4.328.028 0 .45-.464.48-.464 2.05 0 3.714 1.775 3.714 3.964-.001 2.192-1.664 3.968-3.715 3.968z"
+                  fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="mail" viewBox="0 0 95 32">
+            <path fill="none" d="M0 0h95v32H0z"/>
+            <clipPath id="maila">
+                <path d="M0 0h95v32H0z"/>
+            </clipPath>
+            <g clip-path="url(#maila)">
+                <path fill="#fff"
+                      d="M91.063 2.96h3.033v20.593h-3.033zm-3.278 20.593h-3.033V8.96h3.033v14.593zM86.269 2.449a2.048 2.048 0 11-.001 4.095 2.048 2.048 0 01.001-4.095zm-4.794 21.104h-2.982v-1.596c-1.068 1.21-2.95 1.97-4.72 1.97a7.674 7.674 0 01-7.671-7.671 7.675 7.675 0 017.671-7.671c1.77 0 3.553.667 4.72 1.846V8.96h2.982v14.593zM73.87 11.651c2.61 0 4.664 1.868 4.664 4.605 0 2.738-2.054 4.622-4.664 4.622-2.611 0-4.595-2.011-4.595-4.622 0-2.61 1.984-4.605 4.595-4.605zM43.841 23.553H40.86V8.96h2.981v1.019c.662-.622 1.903-1.391 3.625-1.394 2.115 0 3.692.89 4.773 2.322 1.182-1.417 3.13-2.322 5.116-2.322 3.725 0 6.264 2.516 6.264 6.436v8.532h-2.981v-8.532a3.458 3.458 0 00-3.454-3.454 3.457 3.457 0 00-3.454 3.454v8.532h-2.981v-8.532a3.458 3.458 0 00-3.454-3.454 3.457 3.457 0 00-3.454 3.454v8.532z"/>
+                <path d="M20.813 16A4.818 4.818 0 0116 20.813 4.818 4.818 0 0111.187 16 4.818 4.818 0 0116 11.187 4.818 4.818 0 0120.813 16M16 0C7.178 0 0 7.178 0 16s7.178 16 16 16c3.232 0 6.349-.962 9.013-2.783l.046-.032-2.156-2.506-.036.024A12.672 12.672 0 0116 28.72C8.986 28.72 3.28 23.014 3.28 16S8.986 3.28 16 3.28 28.72 8.986 28.72 16c0 .909-.101 1.829-.3 2.734-.402 1.651-1.558 2.157-2.426 2.09-.873-.071-1.894-.693-1.901-2.215V16c0-4.463-3.63-8.093-8.093-8.093S7.907 11.537 7.907 16s3.63 8.093 8.093 8.093a8.03 8.03 0 005.734-2.389 5.198 5.198 0 003.997 2.389 5.399 5.399 0 003.678-1.078c.959-.728 1.675-1.781 2.071-3.046.063-.204.179-.672.18-.675l.003-.017C31.896 18.262 32 17.25 32 16c0-8.822-7.178-16-16-16"
+                      fill="#ff9e00" fill-rule="nonzero"/>
+            </g>
+        </symbol>
+        <symbol id="more">
+            <path d="M51 153c-28.05 0-51 22.95-51 51s22.95 51 51 51 51-22.95 51-51-22.95-51-51-51zm306 0c-28.05 0-51 22.95-51 51s22.95 51 51 51 51-22.95 51-51-22.95-51-51-51zm-153 0c-28.05 0-51 22.95-51 51s22.95 51 51 51 51-22.95 51-51-22.95-51-51-51z"/>
+        </symbol>
+    </svg>
+    <!-- endinject -->
+</div>
+
 </html>
