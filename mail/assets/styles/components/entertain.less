@@ -1,10 +1,122 @@
 .entertain {
+  position: relative;
+  width: 300px;
+  margin-left: 24px;
+
+  &__text {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    .font-smallest;
+    color: @grey;
+  }
+
   &__ads {
+    padding: 53px 10px;
+    border: 0.01em solid @light-grey;
+    border-top: none;
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      padding-left: 10px;
+      padding-bottom: 9px;
+      cursor: pointer;
+    }
+
     &-img {
-      width: 100px;
-      height: 50px;
-      background-image: url("./assets/images/ads.jpg");
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 13px;
+
+      &._ad1 {
+        background-image: url("./assets/images/ad-top.png");
+      }
+
+      &._ad2 {
+        background-image: url("./assets/images/ad-bottom.png");
+      }
+    }
+
+    &-name {
+      .font-small;
+      color: @blue;
+    }
+
+    &-item:hover &-name {
+      color: @light-orange;
+    }
+
+    &-info {
+      width: 200px;
+      line-height: 1;
+    }
+
+    &-content {
+      .font-smaller;
+      color: @dark-grey;
+    }
+
+    &-detail {
+      padding-top: 0;
+      .font-smallest;
+      color: @grey;
+    }
+  }
+
+  &__games {
+    padding: 4px 1px;
+
+    &-tab {
+      margin-right: 17px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: row;
+      margin-top: 2px;
+    }
+
+    &-item {
+      position: relative;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    &-img {
+      width: 146px;
+      height: 144px;
       background-size: cover;
+
+      &._game1 {
+        background-image: url("./assets/images/game1.jpg");
+      }
+
+      &._game2 {
+        background-image: url("./assets/images/game2.jpg");
+      }
+    }
+
+    &-play {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 20px;
+      width: 70px;
+      height: 27px;
+      background-color: @bright-blue;
+      .font-bold-small;
+      color: @white;
     }
   }
 }

@@ -10,6 +10,10 @@
 
   &__tab {
     margin-right: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__wrapper {
@@ -28,10 +32,35 @@
     outline: none;
   }
 
+  &__icon {
+    position: absolute;
+    top: 13px;
+    left: 11px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__tip {
+    position: absolute;
+    top: 13px;
+    right: 121px;
+    .font-small;
+    color: @grey;
+    text-decoration: none;
+
+    &-comment {
+      color: @blue;
+    }
+
+    &:hover &-comment {
+      text-decoration: underline;
+    }
+  }
+
   &__button {
     height: 40px;
     width: 118px;
-    .font-regular-big;
+    .font-bigger;
     color: @white;
     line-height: 34px;
     border: 2px solid @light-orange;

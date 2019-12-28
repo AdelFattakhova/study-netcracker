@@ -98,11 +98,6 @@ gulp.task('m-svgstore', function () {
                         removeTitle: true
                     },
                     {
-                        removeAttrs: {
-                            attrs: "(stroke)"
-                        }
-                    },
-                    {
                         removeStyleElement: true
                     },
                     {
