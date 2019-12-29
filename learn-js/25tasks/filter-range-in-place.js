@@ -5,12 +5,8 @@
 //
 // Функция должна изменять принимаемый массив и ничего не возвращать.
 
-let arr = [5, 3, 8, 1];
+let array = [5, 3, 8, 1];
 
-const filterRangeInPlace = (arr, a, b) => {
-    arr.filter(item => (item >= a && item <= b) ? item : arr.splice(arr.indexOf(item), 1));
-};
+const filterRangeInPlace = (arr, a, b) => arr.filter(item => item >= a && item <= b);
 
-filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
-
-console.log(arr);
+console.log(filterRangeInPlace(array, 1, 4));
