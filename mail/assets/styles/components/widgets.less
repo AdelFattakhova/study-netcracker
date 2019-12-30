@@ -1,25 +1,28 @@
 .widgets {
   margin-top: 12px;
 
-  &__city {
-    .font-bold;
-    color: @dark-grey;
-    text-decoration: underline;
-    cursor: pointer;
-    outline: none;
+  &__region {
+    &-name {
+      .font-bold;
+      color: @dark-grey;
+      text-decoration: underline;
+      cursor: pointer;
+      outline: none;
 
-    &:hover {
-      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
-  &__items {
+  &__main {
     display: flex;
     flex-direction: row;
     margin-top: 9px;
   }
 
-  &__item {
+  &__widget {
+    position: relative;
     display: flex;
     flex-direction: row;
     margin-right: 16px;
@@ -51,52 +54,52 @@
       }
     }
 
-    &-text {
-      margin-bottom: 5px;
-      .font-small;
+    &-part {
+      display: flex;
+      flex-direction: column;
+      margin-left: 7px;
 
-      &._temperature {
-        .font-biggest;
-      }
+      &-text {
+        margin-bottom: 5px;
+        .font-small;
 
-      &._link {
-        color: @bright-blue;
-      }
+        &._temperature {
+          .font-biggest;
+        }
 
-      &._rate {
-        margin-bottom: 0;
-        .font-big;
-      }
+        &._detail {
+          color: @bright-blue;
+        }
 
-      &._change {
-        color: @green;
+        &._rate {
+          margin-bottom: 0;
+          .font-big;
+        }
+
+        &._change {
+          color: @green;
+        }
+
+        &._astro {
+          position: relative;
+          padding-left: 16px;
+        }
+
+        &._more {
+          color: @grey;
+          .ellipsis(53%);
+        }
       }
 
       &._astro {
-        position: relative;
-        padding-left: 16px;
-      }
-
-      &._more {
-        color: @grey;
-        .ellipsis(53%);
+        margin-left: 0;
       }
     }
 
-    &:hover &-text {
-      &._link, &._rate, &._astro {
+    &:hover &-part-text {
+      &._detail, &._rate, &._astro {
         text-decoration: underline;
       }
-    }
-  }
-
-  &__part {
-    display: flex;
-    flex-direction: column;
-    margin-left: 7px;
-
-    &._astro {
-      margin-left: 0;
     }
   }
 }
