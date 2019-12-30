@@ -1,0 +1,32 @@
+.main-news {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  cursor: pointer;
+  outline: none;
+
+  &__img {
+    width: 87px;
+    height: 60px;
+    margin-right: 12px;
+    background-image: url("./assets/images/news-img.jpg");
+    background-size: cover;
+  }
+
+  &__content {
+    &-text {
+      color: @blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-description {
+      display: block;
+      margin-top: 5px;
+      .font-small;
+      color: @dark-grey;
+    }
+  }
+}

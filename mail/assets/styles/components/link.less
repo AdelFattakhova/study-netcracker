@@ -13,6 +13,7 @@
 
   &._all {
     position: relative;
+
   }
 
   &__icon {
@@ -23,5 +24,10 @@
     height: 0;
     border: 4px solid;
     border-color: @bright-blue @white @white;
+  }
+
+  &._all:hover &__icon {
+    color: @light-orange;
+    border-color: @light-orange @white @white;
   }
 }
