@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="main.css" type="text/css">
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <title>Mail.ru</title>
+    <!--style>:focus{outline:0}::-moz-focus-inner{border:0;}</style-->
 </head>
 <body>
 <header class="header">
@@ -30,18 +31,18 @@
 <main class="layout">
     <aside class="layout__sidebar sidebar">
         <section class="sidebar__mail mail">
-            <div class="mail__img" tabindex="0">
+            <div class="mail__img">
                 <a class="mail__img-link" href="#">СДЕЛАТЬ СТАРТОВОЙ</a>
             </div>
             <form class="mail__mail-form mail-form">
                 <div class="mail-form__head">
-                    <a class="mail-form__head-item link _underlined" tabindex="0">Почта</a>
-                    <a class="mail-form__head-item" tabindex="0" title="Облако">
+                    <a class="mail-form__head-item link _underlined">Почта</a>
+                    <a class="mail-form__head-item" title="Облако">
                         <svg class="mail-form__head-icon _cloud">
                             <use href="#cloud"></use>
                         </svg>
                     </a>
-                    <a class="mail-form__head-item" tabindex="0">
+                    <a class="mail-form__head-item">
                         <svg class="mail-form__head-icon _calendar">
                             <use href="#calendar"></use>
                         </svg>
@@ -49,56 +50,56 @@
                     </a>
                 </div>
                 <div class="mail-form__email">
-                    <input class="mail-form__input" type="text" placeholder="Имя ящика" tabindex="21">
-                    <select class="mail-form__select" tabindex="22">
+                    <input class="mail-form__input" type="text" placeholder="Имя ящика" tabindex="1">
+                    <select class="mail-form__select" tabindex="2">
                         <option class="mail-form__option" selected="selected">@mail.ru</option>
                         <option class="mail-form__option">@inbox.ru</option>
                         <option class="mail-form__option">@list.ru</option>
                         <option class="mail-form__option">@bk.ru</option>
                     </select>
                 </div>
-                <button class="mail-form__button" tabindex="23">
+                <button class="mail-form__button" tabindex="3">
                     Ввести пароль
                     <svg class="mail-form__button-icon">
                         <use href="#arrow"></use>
                     </svg>
                 </button>
                 <div class="mail-form__options">
-                    <label class="mail-form__remember" tabindex="24">
+                    <label class="mail-form__remember" tabindex="4">
                         <input class="mail-form__remember-check" type="checkbox" checked="checked" tabindex="-1">
                         <span class="mail-form__remember-text">Запомнить</span>
                     </label>
-                    <a class="mail-form__restore" tabindex="25">Забыли пароль?</a>
+                    <a class="mail-form__restore" tabindex="5">Забыли пароль?</a>
                 </div>
-                <a class="mail-form__create" tabindex="26">Создать почту</a>
+                <a class="mail-form__create" tabindex="6">Создать почту</a>
             </form>
         </section>
         <section class="sidebar__projects projects">
-            <a class="projects__item" tabindex="0">
+            <a class="projects__item">
                 <div class="projects__item-img _cloud"></div>
                 <span class="projects__item-name">Облако</span>
             </a>
-            <a class="projects__item" tabindex="0">
+            <a class="projects__item">
                 <div class="projects__item-img _world"></div>
                 <span class="projects__item-name">Мой Мир</span>
             </a>
-            <a class="projects__item" tabindex="0">
+            <a class="projects__item">
                 <div class="projects__item-img _social"></div>
                 <span class="projects__item-name">Одноклассники</span>
             </a>
-            <a class="projects__item" tabindex="0">
+            <a class="projects__item">
                 <div class="projects__item-img _youla"></div>
                 <span class="projects__item-name">Юла</span>
             </a>
-            <a class="projects__item" tabindex="0">
+            <a class="projects__item">
                 <div class="projects__item-img _horoscope"></div>
                 <span class="projects__item-name">Гороскоп: Скорпион</span>
             </a>
-            <a class="projects__item" tabindex="0">
+            <a class="projects__item">
                 <div class="projects__item-img _tv"></div>
                 <span class="projects__item-name">ТВ-программа</span>
             </a>
-            <a class="projects__item" tabindex="0">
+            <a class="projects__item">
                 <div class="projects__item-img _combo"></div>
                 <span class="projects__item-name">Подписка Комбо</span>
             </a>
@@ -115,40 +116,40 @@
     <section class="layout__col main">
         <section class="main__search search">
             <nav class="search__tabs">
-                <a class="search__tab link _selected" tabindex="0">Поиск в интернете</a>
-                <a class="search__tab link" tabindex="0">Картинки</a>
-                <a class="search__tab link" tabindex="0">Видео</a>
-                <a class="search__tab link" tabindex="0">Ответы</a>
+                <a class="search__tab link _selected">Поиск в интернете</a>
+                <a class="search__tab link">Картинки</a>
+                <a class="search__tab link">Видео</a>
+                <a class="search__tab link">Ответы</a>
             </nav>
             <form class="search__wrapper">
-                <input class="search__input" type="search" tabindex="1">
+                <input class="search__input" type="search">
                 <svg class="search__icon">
                     <use href="#search"></use>
                 </svg>
-                <a class="search__tip" href="#" tabindex="3">
+                <a class="search__tip" href="#">
                     <span class="search__tip-start">Сейчас ищут:</span>
                     <span class="search__tip-comment">купить билет на самолет</span>
                 </a>
-                <button class="search__button" type="submit" tabindex="2">Найти</button>
+                <button class="search__button" type="submit">Найти</button>
             </form>
         </section>
         <section class="main__row row">
             <section class="row__news news">
                 <nav class="news__tabs">
-                    <a class="news__tab _selected" tabindex="30">Новости</a>
-                    <a class="news__tab" tabindex="31">Москва</a>
-                    <a class="news__tab" tabindex="32">Спорт</a>
-                    <a class="news__tab" tabindex="33">Леди</a>
-                    <a class="news__tab" tabindex="34">Авто</a>
-                    <a class="news__tab" tabindex="35">Кино</a>
-                    <a class="news__tab" tabindex="36">Hi-Tech</a>
+                    <a class="news__tab _selected">Новости</a>
+                    <a class="news__tab">Москва</a>
+                    <a class="news__tab">Спорт</a>
+                    <a class="news__tab">Леди</a>
+                    <a class="news__tab">Авто</a>
+                    <a class="news__tab">Кино</a>
+                    <a class="news__tab">Hi-Tech</a>
                     <a class="news__tab">
                         <svg class="news__tab-more">
                             <use href="#more"></use>
                         </svg>
                     </a>
                 </nav>
-                <a class="news__main-news main-news" tabindex="0">
+                <a class="news__main-news main-news">
                     <div class="main-news__img"></div>
                     <div class="main-news__content">
                         <span class="main-news__content-text">США не заявили России о выходе из Договора по открытому небу</span>
@@ -192,20 +193,20 @@
                         </a>
                     </li>
                     <li class="news__news-item">
-                        <a class="news__news-theme link" tabindex="0">ЛЕДИ</a>
-                        <a class="news__news-text link" tabindex="0">
+                        <a class="news__news-theme link">ЛЕДИ</a>
+                        <a class="news__news-text link">
                             <span class="link__title">36-летняя Алсу в ультракоротком платье произвела фурор в Кремле</span>
                         </a>
                     </li>
                     <li class="news__news-item">
-                        <a class="news__news-theme link" tabindex="0">АВТО</a>
-                        <a class="news__news-text link" tabindex="0">
+                        <a class="news__news-theme link">АВТО</a>
+                        <a class="news__news-text link">
                             <span class="link__title">"АВТОВАЗ" рассекретил обновленную "Ниву" (фото)</span>
                         </a>
                     </li>
                     <li class="news__news-item">
-                        <a class="news__news-theme link" tabindex="0">ДОМ</a>
-                        <a class="news__news-text link" tabindex="0">
+                        <a class="news__news-theme link">ДОМ</a>
+                        <a class="news__news-text link">
                             <span class="link__title">Москвичи раскритиковали кладбищенский стиль перехода в центре</span>
                         </a>
                     </li>
@@ -215,10 +216,10 @@
                 </a>
                 <section class="news__widgets widgets">
                     <div class="widgets__region">
-                        <span class="widgets__region-name" tabindex="0">Москва</span>
+                        <span class="widgets__region-name">Москва</span>
                     </div>
                     <div class="widgets__main">
-                        <a class="widgets__widget _weather" tabindex="0">
+                        <a class="widgets__widget _weather">
                             <svg class="widgets__widget-img _weather">
                                 <use href="#weather"></use>
                             </svg>
@@ -228,7 +229,7 @@
                                 <span class="widgets__widget-text _detail">Подробнее</span>
                             </div>
                         </a>
-                        <a class="widgets__widget" tabindex="0" title="Курс ЦБ РФ">
+                        <a class="widgets__widget" title="Курс ЦБ РФ">
                             <svg class="widgets__widget-img _currency">
                                 <use href="#dollar"></use>
                             </svg>
@@ -237,7 +238,7 @@
                                 <span class="widgets__widget-text _change">+0.26</span>
                             </div>
                         </a>
-                        <a class="widgets__widget" tabindex="0" title="Курс ЦБ РФ">
+                        <a class="widgets__widget" title="Курс ЦБ РФ">
                             <svg class="widgets__widget-img _currency">
                                 <use href="#euro"></use>
                             </svg>
@@ -246,7 +247,7 @@
                                 <span class="widgets__widget-text _change">+0.53</span>
                             </div>
                         </a>
-                        <a class="widgets__widget" tabindex="0" title="Благоприятный день для покупок">
+                        <a class="widgets__widget" title="Благоприятный день для покупок">
                             <svg class="widgets__widget-img _astro">
                                 <use href="#astro"></use>
                             </svg>
@@ -284,15 +285,15 @@
                 </section>
                 <section class="entertain__games">
                     <nav class="entertain__games-tabs">
-                        <a class="entertain__games-tab link _selected" tabindex="0">Игры</a>
-                        <a class="entertain__games-tab link" tabindex="0">Мини-игры</a>
+                        <a class="entertain__games-tab link _selected">Игры</a>
+                        <a class="entertain__games-tab link">Мини-игры</a>
                     </nav>
                     <div class="entertain__games-items">
-                        <a class="entertain__games-item" tabindex="0">
+                        <a class="entertain__games-item">
                             <div class="entertain__games-img _left"></div>
                             <div class="entertain__games-play">ИГРАТЬ</div>
                         </a>
-                        <a class="entertain__games-item _right" tabindex="0">
+                        <a class="entertain__games-item _right">
                             <div class="entertain__games-img _right"></div>
                             <div class="entertain__games-play">ИГРАТЬ</div>
                         </a>
@@ -304,9 +305,9 @@
 </main>
 <footer class="footer">
     <nav class="footer__items">
-        <a class="footer__item" tabindex="0">О компании</a>
-        <a class="footer__item" tabindex="0">Реклама</a>
-        <a class="footer__item" tabindex="0">Помощь</a>
+        <a class="footer__item">О компании</a>
+        <a class="footer__item">Реклама</a>
+        <a class="footer__item">Помощь</a>
         <a class="footer__item">
             <svg class="footer__item-more">
                 <use href="#more"></use>
