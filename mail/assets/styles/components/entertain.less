@@ -20,7 +20,7 @@
       display: flex;
       flex-direction: row;
       padding-left: 10px;
-      padding-bottom: 9px;
+      padding-bottom: 17px;
       cursor: pointer;
     }
 
@@ -32,11 +32,11 @@
       background-position: center;
       margin-right: 13px;
 
-      &._ad1 {
+      &._upper {
         background-image: url("./assets/images/ad-top.png");
       }
 
-      &._ad2 {
+      &._bottom {
         background-image: url("./assets/images/ad-bottom.png");
       }
     }
@@ -51,8 +51,11 @@
     }
 
     &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
       width: 200px;
-      line-height: 1;
+      height: 80px;
     }
 
     &-content {
@@ -98,11 +101,11 @@
       height: 144px;
       background-size: cover;
 
-      &._game1 {
+      &._left {
         background-image: url("./assets/images/game1.jpg");
       }
 
-      &._game2 {
+      &._right {
         background-image: url("./assets/images/game2.jpg");
       }
     }
