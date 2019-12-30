@@ -2,7 +2,7 @@
   border: 1px solid @light-grey;
   border-radius: 2px;
   cursor: pointer;
-  transition: box-shadow, border 0.5s ease;
+  transition: box-shadow 0.5s ease;
 
   &._small {
     display: flex;
@@ -14,14 +14,6 @@
     color: @dark-grey;
   }
 
-  &._small &__img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    background-image: url("./assets/images/ali.png");
-    background-size: cover;
-  }
-
   &._big {
     margin-top: 5px;
     margin-left: -18px;
@@ -29,11 +21,21 @@
     height: 57px;
   }
 
-  &._big &__img {
-    width: 100%;
-    height: 100%;
-    background-image: url("./assets/images/banner.jpg");
-    background-size: cover;
+  &__img {
+    &._small {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      background-image: url("./assets/images/ali.png");
+      background-size: cover;
+    }
+
+    &._big {
+      width: 100%;
+      height: 100%;
+      background-image: url("./assets/images/banner.jpg");
+      background-size: cover;
+    }
   }
 
   &__detail {
