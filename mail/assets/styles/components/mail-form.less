@@ -1,7 +1,7 @@
 .mail-form {
   position: relative;
   height: 195px;
-  border: 1px solid @darker-grey;
+  .form-style(@border-color: @darker-grey, @br-radius: 2px, @bl-radius: 2px);
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
   transition: border 0.5s ease;
@@ -67,16 +67,13 @@
   }
 
   &__input {
-    margin-left: 19px;
     margin-right: 0;
     padding-left: 12px;
     padding-right: 12px;
     width: 102px;
     height: 28px;
     z-index: 1;
-    border: 1px solid @light-grey;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    .form-style(19px, @light-grey, @tl-radius: 2px, @bl-radius: 2px);
     outline: none;
 
     &:focus {
@@ -87,11 +84,8 @@
   &__select {
     width: 102px;
     height: 32px;
-    margin-left: -3px;
+    .form-style(-3px, @light-grey, @tr-radius: 2px, @br-radius: 2px);
     z-index: 0;
-    border: 1px solid @light-grey;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
     .font-big;
     color: @dark-grey;
     cursor: pointer;
@@ -138,7 +132,6 @@
     .font-small;
     color: @dark-grey;
     cursor: pointer;
-    outline: none;
 
     &-check {
       margin-right: -4px;
@@ -146,6 +139,10 @@
 
     &-text {
       margin-left: 3px;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
@@ -177,4 +174,13 @@
       text-decoration: underline;
     }
   }
+}
+
+.form-style(@margin-left: 0, @border-color: transparent, @tr-radius: 0, @tl-radius: 0, @br-radius: 0, @bl-radius: 0) {
+  margin-left: @margin-left;
+  border: 1px solid @border-color;
+  border-top-right-radius: @tr-radius;
+  border-bottom-right-radius: @br-radius;
+  border-top-left-radius: @tl-radius;
+  border-bottom-left-radius: @bl-radius;
 }
