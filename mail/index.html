@@ -28,24 +28,24 @@
     </nav>
 </header>
 <main class="layout">
-    <aside class="sidebar">
+    <aside class="layout__sidebar sidebar">
         <section class="sidebar__mail mail">
             <div class="mail__img" tabindex="0">
                 <a class="mail__img-link" href="#">СДЕЛАТЬ СТАРТОВОЙ</a>
             </div>
             <form class="mail__login">
                 <div class="mail__head">
-                    <a class="mail__link _underlined" tabindex="0">Почта</a>
-                    <a class="mail__link" tabindex="0" title="Облако">
-                        <svg class="mail__icon _cloud">
+                    <a class="mail__head-item link _underlined" tabindex="0">Почта</a>
+                    <a class="mail__head-item" tabindex="0" title="Облако">
+                        <svg class="mail__head-item-icon _cloud">
                             <use href="#cloud"></use>
                         </svg>
                     </a>
-                    <a class="mail__link" tabindex="0">
-                        <svg class="mail__icon _calendar">
+                    <a class="mail__head-item" tabindex="0">
+                        <svg class="mail__head-item-icon _calendar">
                             <use href="#calendar"></use>
                         </svg>
-                        <span class="mail__link-day">19</span>
+                        <span class="mail__head-item-text _day">19</span>
                     </a>
                 </div>
                 <div class="mail__email">
@@ -66,7 +66,7 @@
                 <div class="mail__options">
                     <label class="mail__remember" tabindex="24">
                         <input class="mail__remember-check" type="checkbox" checked="checked" tabindex="-1">
-                        &nbsp;Запомнить
+                        <span class="mail__remember-text">Запомнить</span>
                     </label>
                     <a class="mail__restore" tabindex="25">Забыли пароль?</a>
                 </div>
@@ -103,7 +103,7 @@
                 <span class="projects__item-name">Подписка Комбо</span>
             </a>
         </section>
-        <a class="sidebar__mail banner _small">
+        <a class="sidebar__banner banner _small">
             <div class="banner__img"></div>
             <div class="banner__content">
                 <span class="banner__name">AliExpress</span>
@@ -112,7 +112,7 @@
             </div>
         </a>
     </aside>
-    <section class="layout__col">
+    <section class="layout__col ">
         <section class="search">
             <nav class="search__tabs">
                 <a class="search__tab link _selected" tabindex="0">Поиск в интернете</a>
@@ -210,7 +210,7 @@
                         </a>
                     </li>
                 </ul>
-                <a class="banner _big">
+                <a class="news__banner banner _big">
                     <div class="banner__img"></div>
                 </a>
                 <section class="news__widgets widgets">
