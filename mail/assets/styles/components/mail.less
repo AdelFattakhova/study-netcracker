@@ -143,7 +143,6 @@
     background-color: @bright-blue;
     border: 1px solid @bright-blue;
     border-radius: 2px;
-    outline: none;
     cursor: pointer;
 
     &-icon {
@@ -151,6 +150,11 @@
       height: 16px;
       fill: @white;
       margin-left: 11px;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid @dark-blue;
     }
   }
 
