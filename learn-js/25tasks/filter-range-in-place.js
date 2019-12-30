@@ -5,7 +5,7 @@
 //
 // Функция должна изменять принимаемый массив и ничего не возвращать.
 
-let array = [5, 3, 8, 1];
+const array = [5, 3, 8, 1];
 
 const filterRangeInPlace = (arr, a, b) => arr.filter(item => item >= a && item <= b);
 
