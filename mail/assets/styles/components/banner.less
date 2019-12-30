@@ -2,6 +2,7 @@
   border: 1px solid @light-grey;
   border-radius: 2px;
   cursor: pointer;
+  transition: box-shadow, border 0.5s ease;
 
   &._small {
     display: flex;
@@ -42,6 +43,5 @@
   &:hover {
     border: 1px solid transparent;
     box-shadow: @light-grey 0 4px 20px 0;
-    transition: box-shadow 0.5s ease;
   }
 }

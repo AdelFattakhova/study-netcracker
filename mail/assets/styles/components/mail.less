@@ -1,6 +1,7 @@
 .mail {
   width: 266px;
   height: 265px;
+  transition: box-shadow 0.5s ease;
 
   &__head {
     position: relative;
@@ -52,7 +53,6 @@
 
     &:hover &-link {
       opacity: 1;
-      transition: opacity 0.5s ease;
     }
 
     &-link {
@@ -63,6 +63,7 @@
       color: @white;
       .font-bold-smaller;
       opacity: 0;
+      transition: opacity 0.5s ease;
 
       &:hover {
         text-decoration: none;
@@ -84,11 +85,12 @@
 
   &__login {
     position: relative;
-    width: 100%;
+    width: 266px;
     height: 195px;
     border: 1px solid @darker-grey;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
+    transition: border 0.5s ease;
   }
 
   &__email {
@@ -104,22 +106,29 @@
     padding-right: 12px;
     width: 102px;
     height: 28px;
+    z-index: 1;
     border: 1px solid @light-grey;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     outline: none;
+
+    &:focus {
+      border: 1px solid @grey;
+    }
   }
 
   &__select {
     width: 102px;
     height: 32px;
     margin-left: -3px;
+    z-index: 0;
     border: 1px solid @light-grey;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     .font-big;
     color: @dark-grey;
     cursor: pointer;
+    outline: none;
   }
 
   &__button {
@@ -193,7 +202,6 @@
 
   &:hover {
     box-shadow: @darker-grey 0 4px 20px 0;
-    transition: box-shadow 0.5s ease;
   }
 
   &:hover &__login {
