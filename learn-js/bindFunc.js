@@ -10,11 +10,7 @@ let user = {
     }
 };
 
-const bindFunc = (func, obj) => {
-    return function() {
-        return func.call(obj);
-    };
-};
+const bindFunc = (func, obj) => (...args) => func.apply(obj, args);
 
 let hi = bindFunc(user.hi, user);
 sayHi(hi);
