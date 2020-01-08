@@ -16,8 +16,17 @@ const foo = func => {
     }
 };
 
+const curry = fn => (...args) => {
+    if (fn.length > args.length) {
+        const f = fn.bind(null, ...args);
+        return curry(f);
+    } else {
+        return fn(...args);
+    }
+};
+
 const sum4 = (a, b, c, d) => a + b + c + d;
-const f = foo(sum4);
+const f = curry(sum4);
 console.log(f(1, 2, 3)(4)); // 10
 console.log(f(1, 2)(3)(4)); // 10
 console.log(f(1)(2)(3)(4));// 10

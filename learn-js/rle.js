@@ -1,27 +1,34 @@
 /**
  * Реализовать RLE-сжатие: AAAB -> A3B, BCCDDDAXXXX -> BC2D3AX4
- * @param  {string} value
+ * @param  {string} text
  * @return {string}
  */
-function rle(value) {
-    let count = 0;
-    let prev = '';
-    let result = '';
+const rle = (text) => {
+    if (typeof text !== "string") {
+        return;
+    }
 
-    value.split('').forEach(curr => {
-        count++;
-        if (curr === prev) {
-            return;
-        }
-        if (prev !== '') {
-            result += count > 1 ? prev + count : prev;
-        }
-        prev = curr;
-        count = 0;
-    });
+    const append = (char, entriesCount) => `${char}${entriesCount > 1 ? entriesCount : ""}`;
 
-    count++;
-    return result += count > 1 ? prev + count : prev;
-}
+    const {encodedText, entriesCount, buffer} = text
+        .split("")
+        .reduce(({encodedText, entriesCount, buffer}, char) => {
+            const isNewChar = char !== buffer;
+            const bufferNotEmpty = !!buffer;
+
+            return {
+                encodedText: isNewChar && bufferNotEmpty ?
+                    (`${encodedText}${append(buffer, entriesCount)}`) : encodedText,
+                entriesCount: isNewChar && bufferNotEmpty ? 1 : ++entriesCount,
+                buffer: char
+            };
+        }, {
+            encodedText: "",
+            entriesCount: -1,
+            buffer: ""
+        });
+
+    return `${encodedText}${append(buffer, entriesCount)}`;
+};
 
 console.log(rle('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD'));
