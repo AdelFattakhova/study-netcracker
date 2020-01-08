@@ -3,6 +3,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: Arial, serif;
+    overflow: hidden;
 }
 
 .form {
@@ -10,20 +12,26 @@ body {
     flex-direction: column;
 }
 
+.form__label {
+    margin-bottom: 10px;
+}
+
 .label {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
     padding-left: 33px;
     height: 25px;
-    font: 28px Arial, serif;
+    font-size: 28px;
     color: #3e3e3e;
     cursor: pointer;
 }
 
 .label__checkbox {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .label__checkbox + .label__text:before {
@@ -62,4 +70,8 @@ body {
 
 .label__checkbox:disabled + .label__text {
     color: #bfbfbf;
+}
+
+.label__checkbox:focus + .label__text:before {
+    box-shadow: 0 0 0 2px #d1d1d1;
 }
