@@ -4,7 +4,8 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, serif;
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .form {
@@ -27,11 +28,15 @@ body {
     cursor: pointer;
 }
 
-.label__checkbox {
+._hidden {
     position: absolute;
+    margin: 0;
+    padding: 0;
     opacity: 0;
     width: 0;
     height: 0;
+    clip: rect(0 0 0 0);
+    border: 0;
 }
 
 .label__checkbox + .label__text:before {
