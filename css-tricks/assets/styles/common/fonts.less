@@ -1,0 +1,29 @@
+.font-face(@font-family, @file-path, @font-weight) {
+  @font-face {
+    font-family: @font-family;
+    src: url("@{file-path}.woff2") format("woff2");
+    font-weight: @font-weight;
+  }
+}
+
+.font-face(Rubik-Regular, "/css-tricks/assets/fonts/Rubik-Regular-kern-latin", 500);
+.font-face(Rubik-Bold, "/css-tricks/assets/fonts/Rubik-Bold-kern-latin", 700);
+
+.font(@font-family, @font-size, @font-weight) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: @font-weight;
+}
+
+.font-regular {
+  .font(Rubik-Regular, 15px, 500);
+}
+
+.font-bold {
+  .font(Rubik-Bold, 15px, 700);
+}
+
+.font-regular-big {
+  .font-regular;
+  font-size: 0.8rem;
+}
