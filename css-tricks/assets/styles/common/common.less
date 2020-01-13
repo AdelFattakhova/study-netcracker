@@ -1,11 +1,28 @@
 html {
+  font-family: -system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif,
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size: 20px;
   line-height: 1.35;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 30px;
+    height: 30px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, @grey, @grey 1px, @dark-grey 0, @dark-grey);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, @orange, @pink);
+    border-radius: 30px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+  }
 }
 
 body {
-  margin: 0;
-  .font-regular;
+  height: 1500px;
 }
 
 ul {
