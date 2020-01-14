@@ -21,8 +21,12 @@
       align-items: center;
       height: 130px;
       padding: .5rem;
-      border-right: 1px solid @grey;
+      border-left: 1px solid @grey;
       box-sizing: border-box;
+
+      &._guides {
+        border-right: 1px solid @grey;
+      }
     }
 
     &-icon {
@@ -31,7 +35,7 @@
       margin: 0 auto .5rem;
       fill: none;
       stroke-width: 2;
-      stroke: @light-grey;
+      stroke: @lighter-grey;
     }
 
     &-text {
@@ -39,25 +43,31 @@
       color: @white;
     }
 
-    &:hover &-icon{
+    &:hover &-icon {
       &._articles {
         stroke: @orange;
       }
+
       &._videos {
         stroke: @pink;
       }
+
       &._almanac {
         stroke: @red;
       }
+
       &._snippets {
         stroke: @purple;
       }
+
       &._newsletter {
         stroke: @light-blue;
       }
+
       &._jobs {
         stroke: @green;
       }
+
       &._guides {
         stroke: @light-green;
       }

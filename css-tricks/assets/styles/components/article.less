@@ -1,0 +1,107 @@
+.article {
+  position: relative;
+  padding: 2.9rem 2rem;
+  margin-bottom: 1rem;
+  font-size: .8rem;
+
+  &__header {
+    margin-bottom: .25rem;
+  }
+
+  &__type {
+    margin-right: .3rem;
+    color: @white;
+  }
+
+  &__date {
+    color: @light-grey;
+  }
+
+  &__title {
+    margin: 0 0 1rem;
+    .font-bold-big;
+    color: @white;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__avatar {
+    position: relative;
+
+    &-img {
+      width: 60px;
+      height: 60px;
+      margin: 20px 10px 16px;
+      border-radius: 50%;
+      background-image: url("assets/images/coyier.jpeg");
+      background-size: cover;
+      filter: grayscale(100%);
+    }
+
+    &-under {
+      position: absolute;
+      bottom: 7px;
+      left: 0;
+      fill: none;
+      width: 80px;
+      height: 56px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0 30px 40px;
+
+    &-prefix {
+      color: @light-grey;
+    }
+
+    &-name {
+      font-weight: 500;
+      color: @white;
+    }
+  }
+
+  &__comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 40px;
+
+    &-prefix {
+      color: @light-grey;
+    }
+
+    &-link {
+      position: relative;
+      padding-right: 30px;
+      font-weight: 500;
+      color: @white;
+    }
+
+    &-icon {
+      position: absolute;
+      top: -2px;
+      right: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(ellipse closest-corner, @dark-purple, @dark-grey),
+    url("assets/images/main-article.png");
+    opacity: .75;
+  }
+}
