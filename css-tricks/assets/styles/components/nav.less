@@ -1,32 +1,23 @@
-.nav {
-  &__main {
-    display: flex;
+.menu {
+  display: flex;
+  transition: .1s;
+  .font-regular;
+
+  &__link {
+    flex: 1;
+    cursor: pointer;
     transition: .1s;
-    .font-regular;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    padding: .5rem;
+    border-left: 1px solid @grey;
+    box-sizing: border-box;
 
-    &-item {
-      flex: 1;
-      cursor: pointer;
-      transition: .1s;
-
-      &:hover {
-        background-color: @grey;
-      }
-    }
-
-    &-link {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 130px;
-      padding: .5rem;
-      border-left: 1px solid @grey;
-      box-sizing: border-box;
-
-      &._guides {
-        border-right: 1px solid @grey;
-      }
+    &._guides {
+      border-right: 1px solid @grey;
     }
 
     &-icon {
@@ -43,34 +34,38 @@
       color: @white;
     }
 
-    &:hover &-icon {
-      &._articles {
-        stroke: @orange;
-      }
+    &:hover {
+      background-color: @grey;
+    }
+  }
 
-      &._videos {
-        stroke: @pink;
-      }
+  &:hover &__link-icon {
+    &._articles {
+      stroke: @orange;
+    }
 
-      &._almanac {
-        stroke: @red;
-      }
+    &._videos {
+      stroke: @pink;
+    }
 
-      &._snippets {
-        stroke: @purple;
-      }
+    &._almanac {
+      stroke: @red;
+    }
 
-      &._newsletter {
-        stroke: @light-blue;
-      }
+    &._snippets {
+      stroke: @purple;
+    }
 
-      &._jobs {
-        stroke: @green;
-      }
+    &._newsletter {
+      stroke: @light-blue;
+    }
 
-      &._guides {
-        stroke: @light-green;
-      }
+    &._jobs {
+      stroke: @green;
+    }
+
+    &._guides {
+      stroke: @light-green;
     }
   }
 }

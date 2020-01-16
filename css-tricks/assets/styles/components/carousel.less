@@ -1,0 +1,176 @@
+.carousel {
+  display: flex;
+  margin: 8rem 0;
+  padding-top: 1rem;
+
+  &__header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 0 0 240px;
+    height: 350px;
+    padding: 2rem;
+    margin: 3rem 0;
+    border-radius: 15px;
+    background: linear-gradient(0deg, @orange, @pink);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 0 .5rem 0;
+    .font-bold-big;
+    color: @white;
+    line-height: 1.15;
+  }
+
+  &__sponsor {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: .8rem;
+    color: @white;
+
+    &-link {
+      font-weight: 700;
+      width: fit-content;
+      border-bottom: 2px solid @white;
+    }
+  }
+
+  &__popular {
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: @grey;
+      border-radius: 5px;
+      box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: @darker-grey;
+    }
+  }
+
+  &__article {
+    min-width: 240px;
+    min-height: 350px;
+    padding: 1.5rem 1.5rem 1.9rem;
+    margin-right: -6.5rem;
+    border-radius: 15px;
+    background-color: @darker-grey;
+    box-shadow: -1rem 0 3rem #000;
+    transition: .2s;
+
+    &-info {
+      font-size: .7rem;
+    }
+
+    &-type {
+      color: @white;
+    }
+
+    &-date {
+      color: @light-grey;
+    }
+
+    &-title {
+      margin-bottom: 3rem;
+      .font-bold-title;
+      line-height: 1.15;
+
+      &-link {
+        text-decoration: none;
+        color: @white;
+
+        &:hover {
+          .link-gradient;
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-1rem);
+      margin-right: -1rem;
+    }
+  }
+
+  &__avatar {
+    position: relative;
+
+    &-img {
+      margin: .5rem 1.3rem .5rem .5rem;
+      width: 40px;
+      height: 40px;
+      background-image: url("assets/images/churcher.png");
+      background-size: cover;
+      border-radius: 50%;
+      filter: grayscale(100%);
+    }
+
+    &-under {
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      fill: none;
+      pointer-events: none;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    margin: 5.7rem 0 1rem;
+
+    &-prefix {
+      color: @light-grey;
+    }
+
+    &-name {
+      font-weight: 500;
+      color: @white;
+      text-decoration: none;
+
+      &:hover {
+        .link-gradient;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__tags {
+    padding: .65rem 0;
+  }
+
+  &__tag {
+    padding: 4px 17px;
+    font-size: .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @light-grey;
+    text-decoration: none;
+    border: 3px solid @border-grey;
+    border-radius: 2rem;
+
+    &:hover {
+      .link-gradient;
+      border: 3px solid @white;
+    }
+  }
+}

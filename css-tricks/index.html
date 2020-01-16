@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="header">
-    <div class="header__logo logo">
+    <div class="logo">
         <a class="logo__link" href="/">
             <svg class="logo__star">
                 <use href="#logo-star"></use>
@@ -18,69 +18,51 @@
             </svg>
         </a>
     </div>
-    <div class="header__middle">
-        <nav class="header__nav nav">
-            <ul class="nav__main">
-                <li class="nav__main-item">
-                    <a class="nav__main-link">
-                        <svg class="nav__main-icon _articles">
-                            <use href="#articles"></use>
-                        </svg>
-                        <span class="nav__main-text">Articles</span>
-                    </a>
-                </li>
-                <li class="nav__main-item">
-                    <a class="nav__main-link">
-                        <svg class="nav__main-icon _videos">
-                            <use href="#videos"></use>
-                        </svg>
-                        <span class="nav__main-text">Videos</span>
-                    </a>
-                </li>
-                <li class="nav__main-item">
-                    <a class="nav__main-link">
-                        <svg class="nav__main-icon _almanac">
-                            <use href="#almanac"></use>
-                        </svg>
-                        <span class="nav__main-text">Almanac</span>
-                    </a>
-                </li>
-                <li class="nav__main-item">
-                    <a class="nav__main-link">
-                        <svg class="nav__main-icon _snippets">
-                            <use href="#snippets"></use>
-                        </svg>
-                        <span class="nav__main-text">Snippets</span>
-                    </a>
-                </li>
-                <li class="nav__main-item">
-                    <a class="nav__main-link">
-                        <svg class="nav__main-icon _newsletter">
-                            <use href="#newsletter"></use>
-                        </svg>
-                        <span class="nav__main-text">Newsletter</span>
-                    </a>
-                </li>
-                <li class="nav__main-item">
-                    <a class="nav__main-link">
-                        <svg class="nav__main-icon _jobs">
-                            <use href="#jobs"></use>
-                        </svg>
-                        <span class="nav__main-text">Jobs</span>
-                    </a>
-                </li>
-                <li class="nav__main-item">
-                    <a class="nav__main-link _guides">
-                        <svg class="nav__main-icon _guides">
-                            <use href="#guides"></use>
-                        </svg>
-                        <span class="nav__main-text">Guides</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="header__search search">
+    <nav class="menu">
+        <a class="menu__link">
+            <svg class="menu__link-icon _articles">
+                <use href="#articles"></use>
+            </svg>
+            <span class="menu__link-text">Articles</span>
+        </a>
+        <a class="menu__link">
+            <svg class="menu__link-icon _videos">
+                <use href="#videos"></use>
+            </svg>
+            <span class="menu__link-text">Videos</span>
+        </a>
+        <a class="menu__link">
+            <svg class="menu__link-icon _almanac">
+                <use href="#almanac"></use>
+            </svg>
+            <span class="menu__link-text">Almanac</span>
+        </a>
+        <a class="menu__link">
+            <svg class="menu__link-icon _snippets">
+                <use href="#snippets"></use>
+            </svg>
+            <span class="menu__link-text">Snippets</span>
+        </a>
+        <a class="menu__link">
+            <svg class="menu__link-icon _newsletter">
+                <use href="#newsletter"></use>
+            </svg>
+            <span class="menu__link-text">Newsletter</span>
+        </a>
+        <a class="menu__link">
+            <svg class="menu__link-icon _jobs">
+                <use href="#jobs"></use>
+            </svg>
+            <span class="menu__link-text">Jobs</span>
+        </a>
+        <a class="menu__link _guides">
+            <svg class="menu__link-icon _guides">
+                <use href="#guides"></use>
+            </svg>
+            <span class="menu__link-text">Guides</span>
+        </a>
+    </nav>
+    <div class="search">
         <form class="search__form">
             <input class="search__form-input" type="search" placeholder="e.g. flexbox">
             <button class="search__form-button" type="submit">
@@ -99,11 +81,11 @@
                 <time class="article__date" datatype="2020-01-13">January 13, 2020</time>
             </header>
             <h1 class="article__title">
-                <a class="article__title-link">Snowpack</a>
+                <a class="article__title-link" href="#">Snowpack</a>
             </h1>
             <div class="article__info">
                 <div class="article__avatar">
-                    <a class="article__avatar-link">
+                    <a class="article__avatar-link" href="#">
                         <div class="article__avatar-img"></div>
                     </a>
                     <svg class="article__avatar-under">
@@ -112,20 +94,327 @@
                 </div>
                 <div class="article__author">
                     <span class="article__author-prefix">Author</span>
-                    <a class="article__author-name">Chris Coyier</a>
+                    <a class="article__author-name" href="#">Chris Coyier</a>
                 </div>
                 <div class="article__comments">
                     <span class="article__comments-prefix">Comments</span>
-                    <a class="article__comments-link">Start the Conversation
+                    <a class="article__comments-link" href="#">Start the Conversation
                         <svg class="article__comments-icon">
                             <use href="#arrow"></use>
                         </svg>
                     </a>
                 </div>
             </div>
+            <p class="article__text">
+                <a class="article__text-link" href="#">Snowpack.</a> Love that name. This is the new thing from the <a
+                    class="article__text-link" href="#">Pika</a> people, who are <em>on to something</em>. It's a
+                bundler <em>alternative</em>, in a sense. It runs over packages you pull from npm to make sure that they
+                are ES module-compatible (native imports). …
+                <a class="article__text-more" href="#">Read article</a>
+            </p>
         </div>
+        <aside class="advertisement">
+            <a class="advertisement__link" href="#">
+                <div class="advertisement__img"></div>
+            </a>
+            <div class="advertisement__title">
+                <div class="advertisement__title-avatar"></div>
+                <a class="advertisement__title-text" href="#">Wufoo powers all our web forms here at CSS-Tricks, and has
+                    for over a decade!</a>
+            </div>
+        </aside>
     </article>
-    <div class="main__carousel carousel"></div>
+    <div class="main__carousel carousel">
+        <div class="carousel__header">
+            <h2 class="carousel__title">Popular this month</h2>
+            <p class="carousel__sponsor">
+                Sponsored by
+                <a class="carousel__sponsor-link">CloudBees Rollout</a>
+            </p>
+        </div>
+        <div class="carousel__popular">
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+            <article class="carousel__article">
+                <div class="carousel__article-info">
+                    <span class="carousel__article-type">Article</span>
+                    <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
+                </div>
+                <h3 class="carousel__article-title">
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                </h3>
+                <div class="carousel__author">
+                    <div class="carousel__avatar">
+                        <a class="carousel__avatar-link" href="#">
+                            <div class="carousel__avatar-img"></div>
+                        </a>
+                        <svg class="carousel__avatar-under">
+                            <use href="#half-circle"></use>
+                        </svg>
+                    </div>
+                    <div class="carousel__author-info">
+                        <span class="carousel__author-prefix">Author</span>
+                        <a class="carousel__author-name" href="#">Ali Churcher</a>
+                    </div>
+                </div>
+                <div class="carousel__tags">
+                    <a class="carousel__tag" href="#">grid</a>
+                    <a class="carousel__tag" href="#">jobs</a>
+                    <a class="carousel__tag" href="#">print</a>
+                </div>
+            </article>
+        </div>
+    </div>
 </main>
 </body>
 

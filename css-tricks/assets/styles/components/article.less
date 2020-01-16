@@ -1,8 +1,14 @@
 .article {
+  display: flex;
+  align-items: flex-start;
   position: relative;
-  padding: 2.9rem 2rem;
   margin-bottom: 1rem;
   font-size: .8rem;
+
+  &__content {
+    margin-right: 3.4rem;
+    width: 70%;
+  }
 
   &__header {
     margin-bottom: .25rem;
@@ -19,12 +25,21 @@
 
   &__title {
     margin: 0 0 1rem;
-    .font-bold-big;
-    color: @white;
+    .font-bold-bigger;
+
+    &-link {
+      color: @white;
+      text-decoration: none;
+
+      &:hover {
+        .link-gradient;
+      }
+    }
   }
 
   &__info {
     display: flex;
+    margin-bottom: 1.7rem;
   }
 
   &__avatar {
@@ -47,6 +62,7 @@
       fill: none;
       width: 80px;
       height: 56px;
+      pointer-events: none;
     }
   }
 
@@ -63,6 +79,11 @@
     &-name {
       font-weight: 500;
       color: @white;
+      text-decoration: none;
+
+      &:hover {
+        .link-gradient;
+      }
     }
   }
 
@@ -81,6 +102,11 @@
       padding-right: 30px;
       font-weight: 500;
       color: @white;
+      text-decoration: none;
+
+      &:hover {
+        .link-gradient;
+      }
     }
 
     &-icon {
@@ -92,16 +118,44 @@
     }
   }
 
-  &:after {
+  &__text {
+    font-size: 1rem;
+    color: @lighter-grey;
+    line-height: 1.6;
+
+    &-link {
+      text-decoration: none;
+      color: @white;
+      border-bottom: 1px solid @warm-grey;
+
+      &:hover {
+        .link-gradient;
+      }
+    }
+
+    &-more {
+      padding-bottom: .15rem;
+      font-weight: 700;
+      .link-gradient;
+      border-bottom: 1px solid @pink;
+
+      &:hover {
+        border-bottom: 1px solid @white;
+      }
+    }
+  }
+
+  &:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     width: 100%;
     height: 100%;
     background-image: radial-gradient(ellipse closest-corner, @dark-purple, @dark-grey),
     url("assets/images/main-article.png");
     opacity: .75;
+    background-size: contain;
   }
 }
