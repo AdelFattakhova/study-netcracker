@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            font-family: system-ui, Arial, sans-serif;
+        }
+
+        .loader {
+            border: 9px solid darkgrey;
+            border-radius: 50%;
+            border-top: 9px solid blue;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .magic {
+            margin-bottom: 20px;
+        }
+
+        ._hidden {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 0;
+            width: 0;
+            height: 0;
+            clip: rect(0 0 0 0);
+        }
+    </style>
+
+</head>
+<body>
+
+<button class="magic _hidden">Магическая кнопка</button>
+<div class="app"></div>
+<div class="loader"></div>
+
+<script>
+    const API = 'https://api.github.com/users/AdelFattakhova';
+
+    class App {
+        constructor() {
+            this.app = document.getElementsByClassName('app')[0];
+            this.loader = document.getElementsByClassName('loader')[0];
+            this.name = '';
+            this.avatarUrl = '';
+            this.button = document.getElementsByClassName('magic')[0];
+            this.counter = 0;
+            this.getUserInfo();
+        }
+
+        async getUserInfo() {
+            await this.delay(4000);
+            fetch(API).then(response => {
+                return response.json();
+            })
+                .then(response => {
+                    this.avatarUrl = response['avatar_url'];
+                    this.name = response['login'];
+                    this.render();
+                });
+        };
+
+        render = () => {
+            document.body.removeChild(this.loader);
+            this.button.classList.remove('_hidden');
+            this.app.innerHTML = `
+                <img src="${this.avatarUrl}">
+                <span>${this.name}</span>
+            `;
+            this.button.addEventListener('click', this.changeButton);
+        };
+
+        changeButton = button => {
+            if (this.counter < 5) {
+                button.textContent = `Магическая кнопка ${++this.counter}`;
+            } else {
+                button.removeEventListener('click', this.changeButton);
+                button.textContent = 'wow';
+            }
+        };
+
+        delay(ms) {
+            return new Promise((res, rej) => {
+                return setTimeout(res, ms);
+            })
+        }
+    }
+
+    new App();
+</script>
+</body>
+</html>

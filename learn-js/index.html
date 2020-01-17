@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            font-family: system-ui, Arial, sans-serif;
+        }
+
+        .loader {
+            border: 9px solid darkgrey;
+            border-radius: 50%;
+            border-top: 9px solid blue;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .magic {
+            margin-bottom: 20px;
+        }
+
+        ._hidden {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 0;
+            width: 0;
+            height: 0;
+            clip: rect(0 0 0 0);
+        }
+    </style>
+
+</head>
+<body>
+
+<button class="magic _hidden">Магическая кнопка</button>
+<div class="app"></div>
+<div class="loader"></div>
+
+<script>
+    const API = 'https://api.github.com/users/AdelFattakhova';
+    const app = document.getElementsByClassName('app')[0];
+    setTimeout(() => {
+        const loader = document.getElementsByClassName('loader')[0];
+        document.body.removeChild(loader);
+
+        const button = document.getElementsByClassName('magic')[0];
+        button.classList.remove('_hidden');
+        let counter = 0;
+        const changeButton = () => {
+            if (counter < 5) {
+                button.textContent = `Магическая кнопка ${++counter}`;
+            } else {
+                button.removeEventListener('click', changeButton);
+                button.textContent = 'wow';
+            }
+        };
+
+        button.addEventListener('click', changeButton);
+
+        app.append(button);
+
+        const avatar = document.createElement('img');
+        const login = document.createElement('span');
+        let avatarUrl;
+        let userName;
+
+        fetch(API).then(response => {
+            return response.json();
+        })
+            .then(response => {
+                avatarUrl = response['avatar_url'];
+                userName = response['login'];
+
+                avatar.src = avatarUrl;
+                login.textContent = userName;
+                app.append(avatar, userName);
+            });
+
+    }, 4000)
+
+</script>
+</body>
+</html>
