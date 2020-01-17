@@ -1,0 +1,33 @@
+.media {
+  margin: 20px auto;
+  padding: 0 70px;
+
+  &__title {
+    .font-bold-middle;
+  }
+
+  &__tags {
+    display: flex;
+
+    &-item {
+      display: block;
+      padding: 9px 15px;
+      margin: 15px 8px 15px 0;
+      background-color: @lighter-grey;
+      border-radius: 3px;
+
+      &._selected {
+        color: @white;
+        background-color: @black;
+      }
+    }
+  }
+
+  &__carousel {
+    width: 900px;
+    height: 200px;
+    margin: 0;
+    background-image: url("assets/images/posters.png");
+    background-size: cover;
+  }
+}

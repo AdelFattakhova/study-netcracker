@@ -317,6 +317,36 @@
     }
 
     more.addEventListener("click", changeToFixed);
+
+    window.addEventListener('scroll', function() {
+        const section = document.getElementsByClassName('layout__col')[0];
+        if (document.documentElement.scrollHeight - window.pageYOffset === document.documentElement.clientHeight) {
+            const media = document.createElement('div');
+            media.classList.add('media');
+            const title = document.createElement('span');
+            title.textContent = 'Афиша';
+            title.classList.add('media__title');
+            const tags = document.createElement('div');
+            tags.classList.add('media__tags');
+            const contents = [
+                {text: 'Кино', className: ['media__tags-item', '_selected']},
+                {text: 'Концерты', className: ['media__tags-item']},
+                {text: 'Театр', className: ['media__tags-item']},
+                {text: 'Спорт', className: ['media__tags-item']},
+                {text: 'Детям', className: ['media__tags-item']}
+            ];
+            contents.forEach(({text, className}) => {
+                const tag = document.createElement('a');
+                tag.textContent = text;
+                tag.classList.add(...className);
+                tags.append(tag);
+            });
+            const carousel = document.createElement('div');
+            carousel.classList.add('media__carousel');
+            media.append(title, tags, carousel);
+            section.append(media);
+        }
+    });
 </script>
 
 </body>
