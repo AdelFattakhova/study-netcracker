@@ -70,19 +70,19 @@
     const API = 'https://api.github.com/users/AdelFattakhova';
 
     class App {
-        constructor() {
+        constructor(api) {
             this.app = document.getElementsByClassName('app')[0];
             this.loader = document.getElementsByClassName('loader')[0];
             this.name = '';
             this.avatarUrl = '';
             this.button = document.getElementsByClassName('magic')[0];
             this.counter = 0;
-            this.getUserInfo();
+            this.getUserInfo(api);
         }
 
-        async getUserInfo() {
+        async getUserInfo(api) {
             await this.delay(4000);
-            fetch(API).then(response => {
+            fetch(api).then(response => {
                 return response.json();
             })
                 .then(response => {
@@ -118,7 +118,7 @@
         }
     }
 
-    new App();
+    new App(API);
 </script>
 </body>
 </html>
