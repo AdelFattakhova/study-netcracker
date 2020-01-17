@@ -99,7 +99,7 @@
                 <img src="${this.avatarUrl}">
                 <span>${this.name}</span>
             `;
-            this.button.addEventListener('click', this.changeButton);
+            this.button.addEventListener('click', this.changeButton.bind(null, this.button));
         };
 
         changeButton = button => {
