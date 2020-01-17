@@ -4,6 +4,11 @@
 
   &__title {
     .font-bold-middle;
+    cursor: pointer;
+
+    &:hover {
+      color: @red;
+    }
   }
 
   &__tags {
@@ -15,10 +20,16 @@
       margin: 15px 8px 15px 0;
       background-color: @lighter-grey;
       border-radius: 3px;
+      cursor: pointer;
 
       &._selected {
         color: @white;
         background-color: @black;
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: @hover-grey;
       }
     }
   }
