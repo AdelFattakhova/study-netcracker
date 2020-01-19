@@ -432,8 +432,17 @@
 <script>
     const btnMenu = document.getElementsByClassName('search__menu')[0];
     const menu = document.getElementsByClassName('menu')[0];
+
+    window.addEventListener('resize', () => {
+        if (document.documentElement.clientWidth <= 950) {
+            menu.classList.add('_hidden');
+        } else if (menu.classList.contains('_hidden')) {
+            menu.classList.remove('_hidden');
+        }
+    });
+
     btnMenu.addEventListener('click', () => {
-        getComputedStyle(menu).opacity === '0' ? menu.style.opacity = '1' : menu.style.opacity = '0';
+        menu.classList.contains('_hidden') ? menu.classList.remove('_hidden') : menu.classList.add('_hidden');
     })
 </script>
 
