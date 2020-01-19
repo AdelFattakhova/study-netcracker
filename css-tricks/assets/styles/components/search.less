@@ -40,12 +40,71 @@
       background-image: linear-gradient(90deg, @orange, @pink);
     }
   }
+
+  &__mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 1250px) {
   .search {
+    padding: 0;
+
     &__form {
       display: none;
+    }
+
+    &__mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 27px;
+      border-bottom-left-radius: 27px;
+      border: 1px solid @grey;
+
+      &-button {
+        padding: 25px;
+        height: 100px;
+        outline: 0;
+        border-top-left-radius: 27px;
+        border-bottom-left-radius: 27px;
+        cursor: pointer;
+        background-color: @dark-grey;
+        border: 0;
+        border-right: 1px solid @grey;
+      }
+
+      &-icon {
+        width: 26px;
+        height: 26px;
+        fill: @white;
+      }
+    }
+
+    &__menu {
+      padding: 0 21px;
+      height: 60px;
+      border: 0;
+      outline: 0;
+      background-color: @dark-grey;
+      cursor: pointer;
+
+      &-icon {
+        width: 26px;
+        height: 26px;
+        fill: @white;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .search {
+    &__mobile {
+      &-button {
+        padding: 0 22px;
+        height: 60px;
+      }
     }
   }
 }

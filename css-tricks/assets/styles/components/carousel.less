@@ -73,7 +73,7 @@
     z-index: 1;
 
     &-info {
-      font-size: .7rem;
+      font-size: 14px;
     }
 
     &-type {
@@ -85,7 +85,7 @@
     }
 
     &-title {
-      margin-bottom: 3rem;
+      margin-bottom: 60px;
       .font-bold-title;
       line-height: 1.15;
 
@@ -132,8 +132,8 @@
   &__author {
     display: flex;
     align-items: center;
-    font-size: .7rem;
-    margin: 5.7rem 0 1rem;
+    font-size: 14px;
+    margin: 114px 0 20px;
 
     &-prefix {
       color: @light-grey;
@@ -160,7 +160,7 @@
   }
 
   &__tag {
-    padding: 4px 17px;
+    padding: .2rem .85rem;
     font-size: .5rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -172,6 +172,42 @@
     &:hover {
       .link-gradient;
       border: 3px solid @white;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel {
+    &__header {
+      flex-direction: column-reverse;
+      flex: 0 1 0;
+      width: 110px;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+
+    &__title {
+      margin: 0;
+      width: fit-content;
+    }
+
+    &__sponsor {
+      flex-direction: row;
+
+      &-link {
+        padding-top: 5px;
+        border-bottom: 0;
+      }
+    }
+
+    &__article {
+      min-width: 170px;
+      margin-right: -1.7rem;
+    }
+
+    &__tags {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

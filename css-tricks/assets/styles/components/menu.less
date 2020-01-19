@@ -1,16 +1,17 @@
 .menu {
   display: flex;
+  flex: 1;
   transition: .1s;
   .font-regular;
 
   &__link {
-    flex: 1;
-    cursor: pointer;
-    transition: .1s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    cursor: pointer;
+    transition: .1s;
     height: 130px;
     padding: .5rem;
     border-left: 1px solid @grey;
@@ -74,14 +75,43 @@
   .menu {
     &__link {
       height: 100px;
+
+      &._guides {
+        border-right: 0;
+      }
+
+      &-icon {
+        height: 30px;
+        width: 30px;
+      }
     }
   }
 }
 
 @media (max-width: 950px) {
   .menu {
+    flex-wrap: wrap;
+    position: absolute;
+    padding: 1rem 0;
+    top: 61px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: @dark-grey;
+    opacity: 0;
+
     &__link {
-      height: 60px;
+      flex: 1 0 33.3%;
+      border: 0;
+
+      &-icon {
+        width: 42px;
+        height: 42px;
+      }
+
+      &._newsletter {
+        display: none;
+      }
     }
   }
 }

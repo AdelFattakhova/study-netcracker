@@ -4,7 +4,7 @@
   position: relative;
   margin-bottom: 1rem;
   padding-top: .5rem;
-  font-size: .8rem;
+  font-size: 16px;
 
   &__content {
     margin-right: 3.4rem;
@@ -27,6 +27,12 @@
   &__title {
     margin: 0 0 1rem;
     .font-bold-bigger;
+
+    @media (max-width: 1200px) {
+      & {
+        font-size: 42px;
+      }
+    }
 
     &-link {
       color: @white;
