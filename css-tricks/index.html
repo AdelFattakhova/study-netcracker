@@ -81,6 +81,9 @@
                 <svg class="search__menu-icon">
                     <use href="#menu"></use>
                 </svg>
+                <svg class="search__menu-close _hidden">
+                    <use href="#close"></use>
+                </svg>
             </button>
         </div>
     </div>
@@ -432,17 +435,29 @@
 <script>
     const btnMenu = document.getElementsByClassName('search__menu')[0];
     const menu = document.getElementsByClassName('menu')[0];
+    const menuIcon = document.getElementsByClassName('search__menu-icon')[0];
+    const closeIcon = document.getElementsByClassName('search__menu-close')[0];
+
+    if (window.innerWidth <= 950) {
+        menu.classList.add('_hidden');
+    }
 
     window.addEventListener('resize', () => {
-        if (document.documentElement.clientWidth <= 950) {
+        if (window.innerWidth <= 950) {
+            menuIcon.classList.remove('_hidden');
+            closeIcon.classList.add('_hidden');
             menu.classList.add('_hidden');
         } else if (menu.classList.contains('_hidden')) {
+            menuIcon.classList.add('_hidden');
+            closeIcon.classList.remove('_hidden');
             menu.classList.remove('_hidden');
         }
     });
 
     btnMenu.addEventListener('click', () => {
-        menu.classList.contains('_hidden') ? menu.classList.remove('_hidden') : menu.classList.add('_hidden');
+        menuIcon.classList.toggle('_hidden');
+        closeIcon.classList.toggle('_hidden');
+        menu.classList.toggle('_hidden');
     })
 </script>
 
