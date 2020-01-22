@@ -6,6 +6,12 @@
   padding-top: .5rem;
   font-size: 16px;
 
+  @media (max-width: 800px) {
+    & {
+      font-size: 14px;
+    }
+  }
+
   &__content {
     margin-right: 3.4rem;
     width: 70%;
@@ -34,6 +40,12 @@
       }
     }
 
+    @media (max-width: 800px) {
+      & {
+        font-size: 32px;
+      }
+    }
+
     &-link {
       color: @white;
       text-decoration: none;
@@ -46,6 +58,7 @@
 
   &__info {
     display: flex;
+    align-items: center;
     margin-bottom: 1.7rem;
   }
 
@@ -55,21 +68,40 @@
     &-img {
       width: 60px;
       height: 60px;
-      margin: 20px 10px 16px;
+      margin: 16px 10px;
       border-radius: 50%;
       background-image: url("assets/images/coyier.jpeg");
       background-size: cover;
       filter: grayscale(100%);
     }
 
+    @media (max-width: 800px) {
+      & {
+        height: 76px;
+
+        &-img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
     &-under {
       position: absolute;
-      bottom: 7px;
+      bottom: 0;
       left: 0;
       fill: none;
       width: 80px;
       height: 56px;
       pointer-events: none;
+
+      @media (max-width: 800px) {
+        & {
+          bottom: 10px;
+          width: 55px;
+          height: 40px;
+        }
+      }
     }
   }
 
@@ -90,6 +122,12 @@
 
       &:hover {
         .link-gradient;
+      }
+    }
+
+    @media (max-width: 800px) {
+      & {
+        margin-left: 18px;
       }
     }
   }
@@ -122,6 +160,12 @@
       right: 0;
       width: 24px;
       height: 24px;
+    }
+
+    @media (max-width: 800px) {
+      & {
+        margin-left: 26px;
+      }
     }
   }
 

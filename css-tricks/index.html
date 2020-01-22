@@ -63,18 +63,23 @@
         </a>
     </nav>
     <div class="search">
-        <form class="search__form">
-            <input class="search__form-input" type="search" placeholder="e.g. flexbox">
-            <button class="search__form-button" type="submit">
-                <svg class="search__form-icon">
-                    <use href="#search"></use>
-                </svg>
-            </button>
-        </form>
+        <div class="search__wrapper">
+            <form class="search__form">
+                <input class="search__form-input" type="search" placeholder="e.g. flexbox">
+                <button class="search__form-button" type="submit">
+                    <svg class="search__form-icon">
+                        <use href="#search"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
         <div class="search__mobile">
             <button class="search__mobile-button" type="button">
                 <svg class="search__mobile-icon">
                     <use href="#search"></use>
+                </svg>
+                <svg class="search__mobile-close _hidden">
+                    <use href="#close"></use>
                 </svg>
             </button>
             <button class="search__menu" type="button">
@@ -89,7 +94,7 @@
     </div>
 </header>
 <main class="main">
-    <article class="main__article article">
+    <article class="article">
         <div class="article__content">
             <header class="article__header">
                 <strong class="article__type">Fresh Article</strong>
@@ -139,7 +144,7 @@
             </div>
         </aside>
     </article>
-    <div class="main__carousel carousel">
+    <div class="carousel">
         <div class="carousel__header">
             <h2 class="carousel__title">Popular this month</h2>
             <p class="carousel__sponsor">Sponsored by
@@ -153,7 +158,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -181,7 +187,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -209,7 +216,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -237,7 +245,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -265,7 +274,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -293,7 +303,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -321,7 +332,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -349,7 +361,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -377,7 +390,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -405,7 +419,8 @@
                     <time class="carousel__article-date" datatype="2020-01-01">Jan 1, 2020</time>
                 </div>
                 <h3 class="carousel__article-title">
-                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered Resume!</a>
+                    <a class="carousel__article-title-link" href="#">New Year, New Job? Let’s Make a Grid-Powered
+                        Resume!</a>
                 </h3>
                 <div class="carousel__author">
                     <div class="carousel__avatar">
@@ -433,25 +448,48 @@
 </body>
 
 <script>
+    const btnSearch = document.getElementsByClassName('search__mobile-button')[0];
     const btnMenu = document.getElementsByClassName('search__menu')[0];
     const menu = document.getElementsByClassName('menu')[0];
+    const search = document.getElementsByClassName('search__wrapper')[0];
     const menuIcon = document.getElementsByClassName('search__menu-icon')[0];
     const closeIcon = document.getElementsByClassName('search__menu-close')[0];
+    const searchIcon = document.getElementsByClassName('search__mobile-icon')[0];
+    const closeSearchIcon = document.getElementsByClassName('search__mobile-close')[0];
+
+    if (window.innerWidth <= 1250) {
+        search.classList.add('_hidden');
+    }
 
     if (window.innerWidth <= 950) {
         menu.classList.add('_hidden');
     }
 
     window.addEventListener('resize', () => {
+        if (window.innerWidth <= 1250) {
+            search.classList.add('_hidden');
+            searchIcon.classList.remove('_hidden');
+            closeSearchIcon.classList.add('_hidden');
+        } else {
+            search.classList.remove('_hidden');
+            searchIcon.classList.add('_hidden');
+            closeSearchIcon.classList.remove('_hidden');
+        }
         if (window.innerWidth <= 950) {
+            menu.classList.add('_hidden');
             menuIcon.classList.remove('_hidden');
             closeIcon.classList.add('_hidden');
-            menu.classList.add('_hidden');
-        } else if (menu.classList.contains('_hidden')) {
+        } else {
+            menu.classList.remove('_hidden');
             menuIcon.classList.add('_hidden');
             closeIcon.classList.remove('_hidden');
-            menu.classList.remove('_hidden');
         }
+    });
+
+    btnSearch.addEventListener('click', () => {
+        searchIcon.classList.toggle('_hidden');
+        closeSearchIcon.classList.toggle('_hidden');
+        search.classList.toggle('_hidden');
     });
 
     btnMenu.addEventListener('click', () => {
