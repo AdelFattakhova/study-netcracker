@@ -16,7 +16,13 @@
     position: relative;
     display: inline-flex;
     align-items: flex-end;
-    width: 100%;
+    width: 835px;
+
+    &:after {
+      content: "";
+      border: 18px solid transparent;
+      border-left: 8px solid @gold;
+    }
   }
 
   &__input {
@@ -82,12 +88,6 @@
     outline: none;
     background-color: @gold;
     cursor: pointer;
-  }
-
-  &__wrapper:after {
-    content: "";
-    border: 18px solid transparent;
-    border-left: 8px solid @gold;
   }
 
   &__bottom {
